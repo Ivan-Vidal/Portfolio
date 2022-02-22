@@ -1,2 +1,24 @@
 <app-header></app-header>
-<h1 class=" mt-1">OLá eu sou o Ivan</h1>
+<div class="home_container">
+   <div>
+        <div class="home__header">
+            <div class="home__img">
+                <img class="home__img-profile" src="assets/imgs/profile-hd.png" alt="">
+            </div>
+            <div class="home__title">
+                <h1>Ivan Vidal</h1>
+            </div>
+            <div class="home__subtitle">
+                <h3>Desenvolvedor Front end</h3>
+            </div>
+            <div class="home__button">
+                <app-button 
+                    [routerLink]="'/about'"
+                    [label]="'Sabia mais'"
+                    >
+                </app-button>
+            </div>
+            
+        </div> 
+   </div>
+</div>

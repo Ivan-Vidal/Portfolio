@@ -1,0 +1,20 @@
+<app-header></app-header>
+
+<div class="project__container">
+    <div class="project__title">
+        <h3>Meu projetos</h3>
+    </div>
+    <div>
+        <div class="d-flex align-item-center">
+            <button class="button__web"> web</button>
+            <button class="button__app"> app</button>
+        </div>
+    </div>
+    <div class="about__button">
+        <app-button
+            [routerLink]="'/home'"
+            [label]="'Fale comigo'"
+            >
+        </app-button>
+    </div>
+</div>
