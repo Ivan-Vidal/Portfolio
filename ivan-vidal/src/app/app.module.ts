@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
 import { ErrorviewComponent } from './views/errorview/errorview.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ButtonComponent } from './components/button/button.component';
+import { AboutComponent } from './views/about/about.component';
+import { MyProjectComponent } from './views/my-project/my-project.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ErrorviewComponent,
-    HeaderComponent
+    HeaderComponent,
+    ButtonComponent,
+    AboutComponent,
+    MyProjectComponent,
   ],
   imports: [
     BrowserModule,

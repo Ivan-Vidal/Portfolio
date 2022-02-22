@@ -1,0 +1,22 @@
+.about__container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.about__title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.about__description {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.about__button {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    padding: 0 20px;
+}

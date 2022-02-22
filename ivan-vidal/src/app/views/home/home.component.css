@@ -1,0 +1,35 @@
+.home__container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.home__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.home__title {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.home__subtitle {
+    margin-top: 10px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.home__img-profile {
+    width: 327px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+.home__button {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    padding: 0 20px;
+}
