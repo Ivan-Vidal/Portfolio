@@ -1,0 +1,15 @@
+.contact__container {
+    margin-top: 40px;
+    padding: 0 20px;
+    
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+} 
+
+.form-group {
+    margin: 20px 0;
+}

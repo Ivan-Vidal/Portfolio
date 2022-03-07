@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 0 20px;
 }
 
 .project__title {
@@ -9,19 +10,10 @@
     margin-bottom: 30px;
 }
 
-.button__web {
-    padding: 10px 20px;
-    background-color: aliceblue;
-    color: #363636;
-    border-radius: 10px;
-    margin-right: 30px; 
-}
-
-.button__app {
-    padding: 10px 20px;
-    background-color: aliceblue;
-    color: #363636;
-    border-radius: 10px;
+.project__content-card {
+    margin-top: 30px;
+    height: 300px;
+    overflow-y: scroll;
 }
 
 .about__button {
@@ -30,3 +22,4 @@
     bottom: 30px;
     padding: 0 20px;
 }
+

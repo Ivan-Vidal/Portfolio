@@ -4,16 +4,26 @@
     <div class="project__title">
         <h3>Meu projetos</h3>
     </div>
-    <div>
-        <div class="d-flex align-item-center">
-            <button class="button__web"> web</button>
-            <button class="button__app"> app</button>
-        </div>
+    <div class="project__content">
+        <mat-tab-group>
+            <mat-tab label="App">
+                 Content 1 
+            </mat-tab>
+
+            <mat-tab label="Web">
+                <div class="project__content-card ">
+                    <app-card-project></app-card-project>
+                </div> 
+            </mat-tab>
+           
+          </mat-tab-group>
+          
     </div>
     <div class="about__button">
         <app-button
-            [routerLink]="'/home'"
+            [routerLink]="'/contact'"
             [label]="'Fale comigo'"
+            [type]="'flat'"
             >
         </app-button>
     </div>

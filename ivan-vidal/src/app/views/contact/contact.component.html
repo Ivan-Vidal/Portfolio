@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div class="contact__container">
+  <div>
+    <span>Precisa de um desenvolvedor Front end?</span>
+    <h1>Vamos trabalhar juntos</h1>
+  </div>
+    <div class="contact__form">
+      <form  method="POST" class="contactForm">
+        <div class="form-group">
+            <input type="text" name="name" class="form-control" id="name"  placeholder="Seu Nome" required data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+            <div class="validation"></div>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" name="email" id="email" placeholder="Seu E-mail" required data-rule="email" data-msg="Please enter a valid email" />
+          <div class="validation"></div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control"  name="subject" id="subject" required placeholder="Assunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+          <div class="validation"></div>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control"  name="message" rows="5" required data-msg="Escreva alguma coisa para nós" placeholder="Escreva alguma coisa para nós"></textarea>
+          <div class="validation"></div>
+        </div>
+        <div class="text-center">
+          <app-button
+              [routerLink]="'/home'"
+              [label]="'Enviar'"
+              [type]="'flat'">
+          </app-button>
+        </div>
+      </form> 
+    </div>
+    <app-button
+      [routerLink]="'/home'"
+      [label]="'Home'"
+      [type]="'raised'"
+      >
+    </app-button>
+  </div>

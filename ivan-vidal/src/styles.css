@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&family=Varela+Round&display=swap');
 
 
@@ -13,4 +12,18 @@
 
 body {
     background-color: #354159;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+/* Overwrite material >>>>>>>>>>>>>> */
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #fff;
+}
+
+.mat-tab-labels {
+    display: flex;
+    justify-content: center;
 }

@@ -3,16 +3,32 @@
     
 }
 
-.button__home {
+.button__flat {
     width: 100%;
     height: 56px;
     background-color: #fff;
     color: #354159;
     font-weight: 700;
     border-radius: 4px;
-    transition: background .2s;
+    transition: background .3s;
 }
 
-.button__home:hover {
-    background-color: rgb(218, 216, 216);
+.button__flat:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.button__raised {
+    width: 100%;
+    height: 56px;
+    background-color: transparent;
+    color: aliceblue;
+    font-weight: 700;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    margin-top: 16px;
+    transition: background .3s;
+}
+
+.button__raised:hover {
+    background-color: #283144; 
 }

@@ -1,5 +1,12 @@
-<div class="button__container">
-    <button class="button__home" >
+<div *ngIf="type === 'flat'" class="button__container">
+    <button class="button__flat" >
         {{label}}
     </button>
 </div>
+
+<div *ngIf="type === 'raised'"  class="button__container">
+    <button class="button__raised" >
+        {{label}}
+    </button>
+</div>
+

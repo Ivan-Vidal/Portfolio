@@ -1,0 +1,24 @@
+.card-project__container-card {
+    margin: 0px 0 20px;
+   padding: 13px;
+   background-color: aliceblue;
+   border-radius: 4px;
+   
+} 
+
+.card-project__content-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-project__img-card {
+    width: 100%;
+    border: 1px solid #354159;
+
+}
+
+.card-project__title-card {
+    color: #354159;
+    margin-top: 5px;
+}
