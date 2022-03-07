@@ -14,6 +14,7 @@ import { AboutComponent } from './views/about/about.component';
 import { MyProjectComponent } from './views/my-project/my-project.component';
 import { CardProjectComponent } from './components/card-project/card-project.component';
 import { ContactComponent } from './views/contact/contact.component';
+import { TechnologiesComponent } from './views/technologies/technologies.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ContactComponent } from './views/contact/contact.component';
     AboutComponent,
     MyProjectComponent,
     CardProjectComponent,
-    ContactComponent
+    ContactComponent,
+    TechnologiesComponent
   ],
   imports: [
     BrowserModule,

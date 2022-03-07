@@ -1,0 +1,56 @@
+.tech__container {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.tech__header{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.tech__content-tec {
+    background-color: aliceblue;
+    width: 100%;
+    margin-left: auto;
+    margin-right : auto;
+    padding: 24px 0;
+    border-radius: 4px;
+    margin-bottom: 40px;
+}
+
+.size {
+    font-size: 30px;
+}
+
+#Js {
+    color: #ffd900;
+}
+
+#Angular {
+    color: #e70606;
+}
+
+#Rjs {
+color: deepskyblue;
+}
+
+#Git {
+color: orangered;
+}
+
+#Njs {
+color:olivedrab;
+}
+
+#Rn {
+color: cornflowerblue;
+}
+
+#Boot {
+color: mediumpurple;
+}
+
+#Material {
+color: royalblue;
+}
+      
