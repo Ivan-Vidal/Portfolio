@@ -6,6 +6,7 @@ import { AboutComponent } from './views/about/about.component';
 import { MyProjectComponent } from './views/my-project/my-project.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { TechnologiesComponent } from './views/technologies/technologies.component';
+import { FormationComponent } from './views/formation/formation.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'project', component: MyProjectComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'tech', component: TechnologiesComponent},
+  { path: 'formation', component: FormationComponent},
   { path: '**', component: ErrorviewComponent}
 ];
 
