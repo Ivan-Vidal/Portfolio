@@ -1,11 +1,15 @@
 .tech__container {
     text-align: center;
-    padding: 0 20px;
+    
 }
 
 .tech__header{
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.tech__content {
+    padding: 0 20px;
 }
 
 .tech__content-tec {
@@ -13,9 +17,21 @@
     width: 100%;
     margin-left: auto;
     margin-right : auto;
-    padding: 24px 0;
+    padding: 24px 0px;
     border-radius: 4px;
     margin-bottom: 40px;
+}
+
+.tech__button {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    padding: 0 20px;
+}
+
+.tech__img {
+    width: 30px;
+    border-radius: 20px;
 }
 
 .size {

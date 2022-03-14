@@ -22,7 +22,7 @@
           <textarea class="form-control"  name="message" rows="5" required data-msg="Escreva alguma coisa para nós" placeholder="Escreva alguma coisa para nós"></textarea>
           <div class="validation"></div>
         </div>
-        <div class="text-center">
+        <div class="contact3__button">
           <app-button
               [routerLink]="'/home'"
               [label]="'Enviar'"
@@ -31,10 +31,12 @@
         </div>
       </form> 
     </div>
-    <app-button
+    <div class="home__button">
+      <app-button
       [routerLink]="'/home'"
       [label]="'Home'"
       [type]="'raised'"
       >
     </app-button>
+    </div>
   </div>
