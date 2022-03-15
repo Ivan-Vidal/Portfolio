@@ -1,19 +1,55 @@
-<div>
-    <h3>Formação</h3>
-    <div>
+<app-header></app-header>
+<div class="formation__container">
+    <header class="formation__header">
+        <h2 class="title">Formação</h2>
+    </header>
+    <main class="formation__main">
+        <section class="formation__univer">
+            <div class="formation__conclusion">
+                <h6><i>DEZ-2021</i></h6>
+            </div>
+            <h3 class="formation__univer-title">Universidade da
+                <span class="break__line">Cidade de</span>
+                <span class="break__line">São Paulo</span>
+            </h3>
+        </section>
         <div>
-
+            <p><i>Análise e Desenvolvimento de Sistemas</i></p>
         </div>
-        <div>
-            
-        </div>
-    </div>
+        <section class="formation__course">
+            <h3 class="title">Cursos complementares</h3>
+                <div class="formation__course-content">
+                    <div class="formation__course-name">
+                        Angular 9 Essencial
+                    </div>
+                    <div class="formation__course-date">
+                       <i> Julho - 2021</i>
+                    </div>
+                </div>
+                <div class="formation__course-content">
+                    <div class="formation__course-name">
+                        Angular 9 Essencial
+                    </div>
+                    <div class="formation__course-date">
+                        2021
+                    </div>
+                </div>
+                <div class="formation__course-content">
+                    <div class="formation__course-name">
+                        Angular 9 Essencial
+                    </div>
+                    <div class="formation__course-date">
+                        2021
+                    </div>
+                </div>
+        </section>
+    </main>
     <div class="formation__button">
         <app-button
-        [routerLink]="'/tech'"
-        [label]="'Tecnologias'"
-        [type]="'flat'"
-        >
-    </app-button>
+            [routerLink]="'/tech'"
+            [label]="'Tecnologias'"
+            [type]="'flat'"
+            >
+        </app-button>
     </div>
 </div>
