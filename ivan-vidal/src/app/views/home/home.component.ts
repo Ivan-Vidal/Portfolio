@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+import { MainService } from './../../services/main.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  isMobile$: Observable<any> | undefined;
+  isMobile: any;
+
+  constructor(private MainService: MainService) { }
 
   ngOnInit(): void {
+
+    this.isMobile = this.MainService.isMobile$.subscribe(v => this.MainService.setIsMobile(v))
   }
 
 }
