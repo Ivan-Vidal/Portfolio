@@ -1,16 +1,26 @@
 .contact__container {
     margin-top: 40px;
+}
+
+.contact__header {
     padding: 0 20px;
-    
 }
 
 .contact__form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 0 20px;
 } 
 
 .form-group {
     margin: 20px 0;
+}
+
+.contact__button-home {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    padding: 0 20px;   
 }
 

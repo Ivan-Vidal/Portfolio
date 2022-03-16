@@ -1,9 +1,9 @@
 <app-header></app-header>
 <div class="contact__container">
-  <div>
+  <header class="contact__header">
     <span>Precisa de um desenvolvedor Front end?</span>
-    <h1>Vamos trabalhar juntos</h1>
-  </div>
+    <h1 class="title">Vamos trabalhar juntos</h1>
+  </header>
     <div class="contact__form">
       <form  method="POST" class="contactForm">
         <div class="form-group">
@@ -31,7 +31,7 @@
         </div>
       </form> 
     </div>
-    <div class="home__button">
+    <div class="contact__button-home">
       <app-button
       [routerLink]="'/home'"
       [label]="'Home'"
