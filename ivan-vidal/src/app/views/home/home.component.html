@@ -1,25 +1,37 @@
-<app-header></app-header>
-<div class="home_container">
-   <div>
-        <div class="home__header">
-            <div class="home__img">
-                <img class="home__img-profile" src="assets/imgs/profile-hd.png" alt="">
-            </div>
-            <div class="home__title">
-                <h1>Ivan Vidal</h1>
-            </div>
-            <div class="home__subtitle">
-                <h3>Desenvolvedor Front end</h3>
-            </div>
-            <div class="home__button">
-                <app-button 
-                    [routerLink]="'/about'"
-                    [label]="'Saiba mais'"
-                    [type]="'flat'"
-                    >
-                </app-button>
-            </div>
-            
-        </div> 
-   </div>
-</div>
+<!-- <app-header></app-header> -->
+<div class="container">
+    <div class="d-print-none">
+      
+    </div>
+    <div class="home__header">
+        <div class="home__content-logo">
+            <img src="assets/imgs/logo-mode-dark.svg" class="home__logo" alt="Ivan-VIdal Web Developer">
+        </div>
+    </div> 
+    <div class="home__content-contact">
+        <div class="home__content-item">
+            <img class="home__contact-item" src="assets/imgs/linkedin.svg" alt="">
+        </div>
+        <div class="home__content-item">
+            <img class="home__contact-item" src="assets/imgs/instagram.svg" alt="">
+        </div>
+        <div class="home__content-item">
+            <img class="home__contact-item" src="assets/imgs/whatsapp.svg" alt="">
+        </div>
+    </div>
+    <div class="home__button">
+        <app-button 
+            [label]="'Baixar CV'"
+            [type]="'flat'"
+            >
+        </app-button>
+        <div class="home__button-first">
+            <app-button 
+                [label]="'Saiba mais'"
+                [type]="'raised'"
+                [routerLink]="'/about'"
+            >
+            </app-button>
+        </div>
+    </div>
+ </div>   

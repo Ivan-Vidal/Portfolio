@@ -1,21 +1,23 @@
 .about__container {
-    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 24px;
 }
 
 .about__title {
     text-align: center;
     margin-top: 30px;
-    margin-bottom: 20px;
 }
 
 .about__description {
     text-align: center;
-    padding: 0 20px;
 }
 
 .about__button {
     width: 100%;
-    position: absolute;
-    bottom: 30px;
-    padding: 0 20px;
+    margin-bottom: 30px;
+
 }

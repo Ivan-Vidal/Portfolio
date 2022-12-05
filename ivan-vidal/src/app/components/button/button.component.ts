@@ -7,9 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
 
-@Input() label: string | undefined;
-@Input() type : 'raised' | 'flat' | undefined;
-
+@Input() label! : string
+@Input() type! : 'raised' | 'flat';
+@Input() rote! : string
   constructor() { }
 
   ngOnInit(): void {

@@ -1,4 +1,3 @@
-<app-header></app-header>
 <div class="contact__container">
   <header class="contact__header">
     <span>Precisa de um desenvolvedor Front end?</span>
@@ -22,19 +21,19 @@
           <textarea class="form-control"  name="message" rows="5" required data-msg="Escreva alguma coisa para nós" placeholder="Escreva alguma coisa para nós"></textarea>
           <div class="validation"></div>
         </div>
-        <div class="contact3__button">
-          <app-button
-              [routerLink]="'/home'"
-              [label]="'Enviar'"
-              [type]="'flat'">
-          </app-button>
-        </div>
       </form> 
     </div>
     <div class="contact__button-home">
+      <div class="contact3__button">
+        <app-button
+            [routerLink]="'/home'"
+            [label]="'Enviar'"
+            [type]="'flat'">
+        </app-button>
+      </div>
       <app-button
       [routerLink]="'/home'"
-      [label]="'Home'"
+      [label]="'Voltar ao inicio'"
       [type]="'raised'"
       >
     </app-button>

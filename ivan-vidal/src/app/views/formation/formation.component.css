@@ -44,7 +44,5 @@
 
 .formation__button {
     width: 100%;
-    position: absolute;
     bottom: 30px;
-    padding: 0 20px;
 }

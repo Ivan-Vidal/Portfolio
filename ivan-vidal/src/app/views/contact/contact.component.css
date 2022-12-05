@@ -1,16 +1,31 @@
 .contact__container {
-    margin-top: 40px;
+   padding: 0 24px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   height: 100vh;
+
 }
 
 .contact__header {
-    padding: 0 20px;
+   margin-top: 16px;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.contact__header span {
+    font-size: 20px;
+    margin-bottom: 16px;
 }
 
 .contact__form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 0 20px;
+    width: 100%;
 } 
 
 .form-group {
@@ -19,8 +34,6 @@
 
 .contact__button-home {
     width: 100%;
-    position: absolute;
-    bottom: 30px;
-    padding: 0 20px;   
+    margin-bottom: 30px;
 }
 
