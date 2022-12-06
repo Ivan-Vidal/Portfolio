@@ -4,6 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { HttpClientModule } from '@angular/common/http';
 // import { FormsModule, NgModel } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import {MatSidenavModule} from '@angular/material/sidenav';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
 import { ErrorviewComponent } from './views/errorview/errorview.component';
@@ -32,6 +34,7 @@ import { FormationComponent } from './views/formation/formation.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

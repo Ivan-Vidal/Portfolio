@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  showFiller: boolean = false
+
   isMobile$: Observable<any> | undefined;
   isMobile: any;
 
