@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { HttpClientModule } from '@angular/common/http';
-import { MatLegacyTabsModule as MatTabsModule } from '@angular/material/legacy-tabs';
 // import { FormsModule, NgModel } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +10,6 @@ import { ErrorviewComponent } from './views/errorview/errorview.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ButtonComponent } from './components/button/button.component';
 import { AboutComponent } from './views/about/about.component';
-import { MyProjectComponent } from './views/my-project/my-project.component';
 import { CardProjectComponent } from './components/card-project/card-project.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { TechnologiesComponent } from './views/technologies/technologies.component';
@@ -25,7 +23,6 @@ import { FormationComponent } from './views/formation/formation.component';
     HeaderComponent,
     ButtonComponent,
     AboutComponent,
-    MyProjectComponent,
     CardProjectComponent,
     ContactComponent,
     TechnologiesComponent,
@@ -35,10 +32,6 @@ import { FormationComponent } from './views/formation/formation.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatTabsModule,
-    // FormsModule,
-    // NgModel,
-    // HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
