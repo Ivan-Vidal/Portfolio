@@ -8,12 +8,10 @@
     margin-bottom: 20px;
 }
 
-.tech__content {
-    padding: 0 20px;
-}
-
 .tech__content-tec {
-    background-color: aliceblue;
+    background-color: #0F1624;
+    border-radius: 10px 0 10px 0;
+    box-shadow: rgba(255,255, 255, 0.9) 0px 1px 4px;
     width: 100%;
     margin-left: auto;
     margin-right : auto;
