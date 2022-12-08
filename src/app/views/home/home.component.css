@@ -1,6 +1,8 @@
 .container {
     width: 100vw;
     height: 100vh;
+    padding: 0 24px;
+    margin-top: 56px;
 }
 
 .navbar {
@@ -21,6 +23,7 @@
 
 .home__content-img {
     width: 70px;
+    margin-top: 16px;
 }
 
 .home__img {
@@ -39,6 +42,34 @@
 .home__content-icon {
     width: 24px;
     margin: 0 16px;
+} 
+
+.content-hero {
+    display: flex;
+    align-items: center;
+}
+
+.content-title {
+   display: flex;
+   flex-direction: column;
+}
+
+.content-title h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.content-title span {
+    color: #BCBCBC;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.content-img {
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
 }
 
 /* .home__header {
