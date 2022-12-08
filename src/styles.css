@@ -13,6 +13,11 @@ body {
     background-color: #0F1624;
 }
 
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 
 /* * {
     margin: 0;

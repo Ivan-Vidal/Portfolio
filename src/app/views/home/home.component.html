@@ -39,78 +39,136 @@
 <!-- ---------------------------------------------------------------------------------- -->
 
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="home__content-img">
-                <img class="home__img" src="assets/imgs/logo-mode-dark.svg" alt="Ivan Vidal">
-            </div>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">
-                            <span>Projetos</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span>Tecnologias</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span>Experiencia</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span>Contato</span>
-                        </a>
-                    </li>
-                </ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="home__content-img">
+        <img class="home__img" src="assets/imgs/logo-mode-dark.svg" alt="Ivan Vidal">
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+                    <span>Projetos</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <span>Tecnologias</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <span>Experiencia</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <span>Contato</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <a href="https://github.com/Ivan-Vidal" target="_blank">
+            <img src="assets/icons/icon-github.svg" alt="Github">
+        </a>
+        <a href="https://www.linkedin.com/in/ivan-vidal-b7485a138/" target="_blank">
+            <img class="home__content-icon" src="assets/icons/icon-linkedin.svg" alt="LinkedIn">
+        </a> 
+        <a href="https://api.whatsapp.com/send?L=pt_BR&phone=5511968344811&text=Tenho interesse em seus serviços." target="_blank">
+            <img src="assets/icons/icon-whatsapp.svg" alt="Whatsapp">
+        </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+        <img class="navbar-toggler-icon" src="assets/icons/icon-menu.svg" alt="">
+    </button>
+</nav>
+<div class="container">
+    <header id="home" class="home__content-hero">
+        <div class="home__content-img-hero">
+            <img src="assets/imgs/programming-img.svg" alt="programador">
+        </div>
+        <div class="home__content-title">
+            <h1>Ivan Vidal</h1>
+            <span>Desenvolvedor Front end com 2 anos de experiência no setor bancário.</span>
+        </div>
+        <div class="home__content-see-more">
+
+            <a class="home__content-see-more arrow bounce" href="home#about">
+                <span>Ver mais</span>
+                <img src="assets/icons/seta-para-expandir.png" alt="seta para baixo">
+            </a>
+        </div>
+    </header>
+    <section id="about">
+        <div class="about__content-title">
+            <h1>Sobre</h1>
+        </div>
+        <div class="about__content-logo">
+            <!-- <img class="about__img" src="assets/imgs/logo-mode-dark.svg" alt="Ivan Vidal"> -->
+        </div>
+        <div>
+            Atualmente estou focado em desenvolvimento Web com o framework Angular com Typescript todas as suas abrangêcias.
+            Desenvolvo sites responsivos com o conceito de Mobile First.
+            Quando mais vasculho o mundo do desenvolvimento, mais encantado fico, com o vasto conhecimento que podemos adquirir e compartilhar.❤️
+        </div>
+    </section>
+    <section id="project">
+        <div class="project__content-title">
+            <h1>Projetos</h1>
+        </div>
+        <div>
+            <div>
+                <app-card-project></app-card-project>
             </div>
             <div>
-                <a href="">
-                    <img src="assets/icons/icon-github.svg" alt="">
-                </a>
-                <a href="">
-                    <img class="home__content-icon" src="assets/icons/icon-linkedin.svg" alt="">
-                </a> <a href="">
-                    <img src="assets/icons/icon-whatsapp.svg" alt="">
-                </a>
+                <app-card-project></app-card-project>
             </div>
-            <button 
-                class="navbar-toggler"
-                type="button" data-toggle="collapse"
-                data-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Alterna navegação">
-                <img class="navbar-toggler-icon" src="assets/icons/icon-menu.svg" alt="">
-            </button>
-        </nav>
-        <!-- <nav class="home__content-menu">
-            <div class="home__menu-item"> 
-             
-            </div>
-            <div class="home__menu-item">
-               <span>Tecnologias</span> 
-            </div>
-            <div class="home__menu-item">
-            <span>Experiencia</span>   
-            </div>
-            <div class="home__menu-item">
-                <span>Contato</span> 
-            </div>
-        </nav> -->
-        <div class="container">
-            <div class="content-hero">
-                <div class="content-title">
-                    <h1>Ivan Vidal</h1>
-                    <span>Carreira focada em desenvolvimento Front end, com as linguagens JavaScript(ES6+) & TypeScript, utilizando o framework Angular 11+</span>
-                </div>
-                <!-- <div class="content-img">
-                    <img src="assets/icons/icon-home.svg" alt="">
-                </div> -->
-            </div>
-            
-            
         </div>
+    </section>
+    <section id="technologys">
+        <div class="technologys__content-title">
+            <h1>Tecnologias</h1>
+        </div>
+        <div>
+            <app-technologies></app-technologies>
+        </div>
+        <div class="technologys__content-add">
+            <span>Tecnologias adicionais e habilidades</span>
+            
+            <ul>
+                <li>Scrum & Kanban</li>
+                <li>Github & GitLab</li>
+                <li>BitBucket</li>
+                <li>Git</li>
+                <li>npm & Yarn</li>
+            </ul>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact__content-title">
+            <h1>Contato</h1>
+        </div>
+        <div class="contact__content-footer">
+            <div>
+                ivanvidal.dev@gmail.com
+            </div>
+            <div>
+                <a href="https://github.com/Ivan-Vidal" target="_blank">
+                    <img src="assets/icons/icon-github.svg" alt="Github">
+                </a>
+                <a href="https://www.linkedin.com/in/ivan-vidal-b7485a138/" target="_blank">
+                    <img class="home__content-icon" src="assets/icons/icon-linkedin.svg" alt="LinkedIn">
+                </a> 
+                <a href="https://api.whatsapp.com/send?L=pt_BR&phone=5511968344811&text=Tenho interesse em seus serviços." target="_blank">
+                    <img src="assets/icons/icon-whatsapp.svg" alt="Whatsapp">
+                </a>
+            </div>
+        </div>
+        <footer id="footer">
+            <div class="copyright">
+             Copyright &copy; 2022 - <strong>Ivan Vidal </strong>
+            </div>
+        </footer>
+    </section>
+</div>
