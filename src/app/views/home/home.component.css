@@ -180,19 +180,66 @@ margin-top: 50px;
     justify-content: space-between;
     align-items: center;
     height: 100px;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+ .card-project__button {
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #945DD6, #6978D1, #13ADC7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
 }
 
 #footer {
     margin-top: 36px;
-    margin-bottom: 10px;
 }
 
 .copyright {
     text-align: center;
     font-size: 12px;
+    margin-top: 30px;
 }
 
+.back-to-top {
+    position: fixed;
+    display: none;
+    background-image: linear-gradient(to right, #945DD6, #6978D1, #13ADC7 , #13ADC7, #13ADC7);
+    animation: gradient 3s ease infinite;
+    background-size: 200% 200%;
+    color: #fff;
+    padding: 6px 12px 9px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+  }
+  .block {
+    display: block !important;
+  }
 
+  .back-to-top:focus {
+    background-image: linear-gradient(to right, #13ADC7, #945DD6, #6978D1,);
+    color: #fff;
+    outline: none;
+  }
+  
+  .back-to-top:hover {
+    background-image: linear-gradient(to right, #13ADC7, #945DD6, #6978D1,);
+    color: rgb(255, 255, 255);
+  }
+
+ 
 
 
 

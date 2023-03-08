@@ -37,9 +37,37 @@
  </div>    -->
 
 <!-- ---------------------------------------------------------------------------------- -->
+<nav class="navbar navbar-dark navbar-expand-lg" style="background-color: transparent;">
+    <div class="container-fluid">
+        <div class="home__content-img">
+            <img class="home__img" src="assets/imgs/logo-mode-dark.svg" alt="Ivan Vidal">
+        </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" (click)="showSeeMore = !showSeeMore" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#project">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#technologys">Tecnologias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <nav id="hero" class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="home__content-img">
         <img class="home__img" src="assets/imgs/logo-mode-dark.svg" alt="Ivan Vidal">
     </div>
@@ -82,9 +110,9 @@
         aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
         <img class="navbar-toggler-icon" src="assets/icons/icon-menu.svg" alt="">
     </button>
-</nav>
-<div class="container">
-    <header id="home" class="home__content-hero">
+</nav> -->
+<div class="container" [ngClass]="{'header-fixed': windowScrolled }">
+    <header class="home__content-hero">
         <div class="d-flex flex-column">
             <div class="home__content-img-hero">
                 <img src="assets/imgs/programming-img.svg" alt="programador">
@@ -97,7 +125,7 @@
        
         <div class="home__content-see-more">
 
-            <a class="home__content-see-more arrow bounce" href="home#about">
+            <a class="home__content-see-more arrow bounce" href="home#about" *ngIf="!windowScrolled && showSeeMore">
                 <span>Ver mais</span>
                 <img src="assets/icons/seta-para-expandir.png" alt="seta para baixo">
             </a>
@@ -127,6 +155,13 @@
             <div>
                 <app-card-project></app-card-project>
             </div>
+            <div>
+                <app-card-project></app-card-project>
+            </div>
+            <div>
+                <app-card-project></app-card-project>
+            </div>
+            
         </div>
     </section>
     <section id="technologys">
@@ -152,6 +187,35 @@
         <div class="contact__content-title">
             <h1>Contato</h1>
         </div>
+        <div>
+            <div class="form">
+                <div  class="sendmessage">Sua mensagem foi enviada com sucesso!</div>
+                <div class="errormessage"> Mensagem não enviada!
+                  Preencha todo o Formulário </div>
+                <form  method="POST" role="form" class="contactForm">
+                  <div class="form-group">
+                    <input type="text" name="name" placeholder="Nome" class="form-control" id="name"  required data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control"   name="email" id="email" placeholder="Seu E-mail" required data-rule="email" data-msg="Please enter a valid email" />
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control"   name="subject" id="subject" required placeholder="Assunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control"     name="message" rows="5" required data-msg="Escreva sua dúvida aqui" placeholder="Escreva sua dúvida aqui"></textarea>
+                    <div class="validation"></div>
+                  </div>
+                  <div class="card-project__button">
+                    <span>Enviar</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                </form> 
+              </div>
+        </div>
         <div class="contact__content-footer">
             <div>
                 ivanvidal.dev@gmail.com
@@ -170,8 +234,9 @@
         </div>
         <footer id="footer">
             <div class="copyright">
-             Copyright &copy; 2022 - <strong>Ivan Vidal </strong>
+             Copyright &copy; 2023 - <strong>Vidal Dev Consultoria</strong>
             </div>
         </footer>
     </section>
 </div>
+<a href="home#" class="back-to-top" [ngClass]="{'block': windowScrolled }"  ><i class="fas fa-chevron-up"></i></a>
