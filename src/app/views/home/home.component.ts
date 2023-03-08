@@ -10,7 +10,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   showFiller: boolean = false
-
+  showSeeMore: boolean = true
   isMobile$: Observable<any> | undefined;
   isMobile: any;
 

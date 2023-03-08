@@ -42,7 +42,7 @@
         <div class="home__content-img">
             <img class="home__img" src="assets/imgs/logo-mode-dark.svg" alt="Ivan Vidal">
         </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" (click)="showSeeMore = !showSeeMore" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -125,7 +125,7 @@
        
         <div class="home__content-see-more">
 
-            <a class="home__content-see-more arrow bounce" href="home#about" *ngIf="!windowScrolled">
+            <a class="home__content-see-more arrow bounce" href="home#about" *ngIf="!windowScrolled && showSeeMore">
                 <span>Ver mais</span>
                 <img src="assets/icons/seta-para-expandir.png" alt="seta para baixo">
             </a>
@@ -194,7 +194,7 @@
                   Preencha todo o Formulário </div>
                 <form  method="POST" role="form" class="contactForm">
                   <div class="form-group">
-                    <input type="text" name="name" class="form-control" id="name"  required data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <input type="text" name="name" placeholder="Nome" class="form-control" id="name"  required data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                     <div class="validation"></div>
                   </div>
                   <div class="form-group">
@@ -206,7 +206,7 @@
                     <div class="validation"></div>
                   </div>
                   <div class="form-group">
-                    <textarea class="form-control"     name="message" rows="5" required data-msg="Escreva alguma coisa para nós" placeholder="Escreva alguma coisa para nós"></textarea>
+                    <textarea class="form-control"     name="message" rows="5" required data-msg="Escreva sua dúvida aqui" placeholder="Escreva sua dúvida aqui"></textarea>
                     <div class="validation"></div>
                   </div>
                   <div class="card-project__button">
