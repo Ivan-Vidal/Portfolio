@@ -202,12 +202,14 @@ margin-top: 50px;
 
 #footer {
     margin-top: 36px;
+    padding-bottom: 10px;
 }
 
 .copyright {
     text-align: center;
     font-size: 12px;
-    margin-top: 30px;
+    margin-top: 0;
+    margin-bottom: 8px;
 }
 
 .back-to-top {
