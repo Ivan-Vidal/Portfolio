@@ -37,10 +37,10 @@
  </div>    -->
 
 <!-- ---------------------------------------------------------------------------------- -->
-<nav class="navbar navbar-dark navbar-expand-lg" style="background-color: transparent;">
+<nav id="inicio" class="navbar navbar-dark navbar-expand-lg" style="background-color: transparent;">
     <div class="container-fluid">
         <div class="home__content-img">
-            <img class="home__img" src="assets/imgs/logo-mode-dark.svg" alt="Ivan Vidal">
+            <img (click)="scrollToElement('inicio')" class="home__img" src="assets/imgs/logo-mode-dark.svg" alt="Ivan Vidal">
         </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" (click)="showSeeMore = !showSeeMore" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -48,19 +48,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            <a class="nav-link active" aria-current="page" (click)="scrollToElement('inicio')">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">Sobre</a>
+            <a class="nav-link" (click)="scrollToElement('about')">Sobre</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#project">Projetos</a>
+            <a class="nav-link" (click)="scrollToElement('project')">Projetos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#technologys">Tecnologias</a>
+            <a class="nav-link" (click)="scrollToElement('technologys')">Tecnologias</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contato</a>
+            <a class="nav-link" (click)="scrollToElement('contact')">Contato</a>
           </li>
         </ul>
       </div>
@@ -240,4 +240,4 @@
         </footer>
     </section>
 </div>
-<a href="home#" class="back-to-top" [ngClass]="{'block': windowScrolled }"  ><i class="fas fa-chevron-up"></i></a>
+<a (click)="scrollToElement('inicio')" class="back-to-top" [ngClass]="{'block': windowScrolled }"  ><i class="fas fa-chevron-up"></i></a>
