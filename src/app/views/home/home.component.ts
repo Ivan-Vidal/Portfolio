@@ -21,6 +21,11 @@ export class HomeComponent implements OnInit {
     this.isMobile = this.MainService.isMobile$.subscribe(v => this.MainService.setIsMobile(v))
   }
 
+  scrollToElement(element: any): void {
+    console.log(element);
+    (document.getElementById(element) as HTMLElement).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
+
   onScroll() {
     let backBlock = false
     if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
