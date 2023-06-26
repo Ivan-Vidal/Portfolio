@@ -116,7 +116,7 @@
 </nav> -->
 <div class="container" [ngClass]="{'header-fixed': windowScrolled }">
     <header class="home__content-hero">
-        <div class="d-flex flex-column">
+        <div class="home__content-header">
             <div class="home__content-img-hero">
                 <img src="assets/imgs/programming-img.svg" alt="programador">
             </div>
@@ -125,12 +125,9 @@
                 <span>Sou um desenvolvedor front-end com 2 anos de experiência no setor bancário.</span>
             </div>
         </div>
-
         <div class="home__content-see-more">
-
-            <a class="home__content-see-more arrow bounce" href="home#about" *ngIf="!windowScrolled && showSeeMore">
-                <span>Ver mais</span>
-                <img src="assets/icons/seta-para-expandir.png" alt="seta para baixo">
+            <a class="home__content-see-more" href="home#about" *ngIf="!windowScrolled && showSeeMore">
+                 <span>Ver Mais</span> 
             </a>
         </div>
     </header>
@@ -138,13 +135,34 @@
         <div class="about__content-title">
             <h1>Sobre</h1>
         </div>
-        <div class="about__content-logo">
-            <img class="about__img" src="assets/imgs/web-developer.svg" alt="Ivan Vidal">
-        </div>
-        <div class="about__content-description">
-            Atualmente, estou focado no desenvolvimento web com o framework Angular, utilizando Typescript e todas as
-            suas abrangências. Desenvolvo sites responsivos com o conceito de Mobile First. Quanto mais exploro o mundo
-            do desenvolvimento, mais encantado fico com o vasto conhecimento que podemos adquirir e compartilhar. ❤️
+        <div class="about__content">
+            <div class="about__content-logo">
+                <img class="about__img" src="assets/imgs/web-developer.svg" alt="Ivan Vidal">
+            </div>
+            <div class="about__content-description-mobile">
+                <p>Sou um desenvolvedor Angular com três anos
+                de experiência no setor bancário, focado em
+                criar soluções de software eficientes e robustas. Tenho
+                amplo conhecimento em TypeScript, HTML e CSS, e
+                estou familiarizado com as melhores práticas e
+                os padrões de desenvolvimento do Angular</p>
+            </div>
+            <div class="about__content-description-desk">
+                <span class="break__line">Sou um desenvolvedor Angular com três anos</span>
+                <span class="break__line">de experiência no setor bancário, focado em</span>
+                <span class="break__line">criar soluções de software eficientes e robustas. Tenho</span>
+                <span class="break__line">amplo conhecimento em TypeScript, HTML e CSS, e</span>
+                <span class="break__line">estou familiarizado com as melhores práticas e</span>
+                <span class="break__line">os padrões de desenvolvimento do Angular. Trabalhei</span>
+                <span class="break__line">em projetos desafiadores, como aplicações front-end</span>
+                <span class="break__line">integradas complexos de backend, abrangendo</span>
+                <span class="break__line">serviços bancários online, aplicativos móveis</span>
+                <span class="break__line"> para clientes e ferramentas internas de gestão. Minha</span>
+                <span class="break__line">experiência inclui a compreensão e conformidade,</span>
+                <span class="break__line">bem como das necessidades dos usuários</span>
+                <span class="break__line">em um setor altamente regulamentado.</span>
+
+            </div>
         </div>
     </section>
     <section id="project">
@@ -158,12 +176,7 @@
             <div>
                 <app-card-project></app-card-project>
             </div>
-            <div>
-                <app-card-project></app-card-project>
-            </div>
-            <div>
-                <app-card-project></app-card-project>
-            </div>
+
 
         </div>
     </section>
@@ -183,6 +196,8 @@
                 <li>BitBucket</li>
                 <li>Git</li>
                 <li>npm & Yarn</li>
+                <li>Acessibilidade</li>
+                <li>Tagueamento (Google Tag Manager)</li>
             </ul>
         </div>
     </section>
@@ -190,7 +205,7 @@
         <div class="contact__content-title">
             <h1>Contato</h1>
         </div>
-        <div>
+        <div class="content-form">
             <div class="form">
                 <!-- <div  class="sendmessage">Sua mensagem foi enviada com sucesso!</div>
                 <div class="errormessage"> Mensagem não enviada!
@@ -223,6 +238,20 @@
                     fa-regular fa-arrow-right"></i>
                     </div>
                 </form>
+            </div>
+            <div class="content-text">
+                <p>
+                    <span class="break__line">Se você está procurando um desenvolvedor dedicado, comprometido e
+                        apaixonado por transformar ideias em realidade, estou aqui para ajudar. Adoraria discutir suas
+                        necessidades específicas e como posso contribuir para o sucesso do seu projeto.</span>
+                    <br><br>
+                    <span class="break__line">Não hesite em entrar em contato comigo através dos meus canais disponíveis
+                        abaixo. Ficarei feliz em responder a todas as suas perguntas e agendar uma reunião para discutir
+                        suas necessidades em mais detalhes.</span>
+                    <br><br>
+                    <span class="break__line">Obrigado por visitar o meu portfólio. Estou ansioso para trabalhar com
+                        você e ajudar a transformar suas ideias em soluções digitais de sucesso.</span>
+                </p>
             </div>
         </div>
         <div class="contact__content-footer">
