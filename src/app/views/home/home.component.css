@@ -198,13 +198,15 @@ margin-top: 50px;
     margin-top: 40px;
 }
 
-.form-group {
+.form-control {
     margin-bottom: 16px;
     border-radius: 4px;
 }
 
  .card-project__button {
     border-radius: 4px;
+    width: 100%;
+    border: none;
     cursor: pointer;
     padding: 16px;
     font-size: 14px;
@@ -333,7 +335,7 @@ margin-top: 50px;
     }
 
     .form {
-        width: 550px;
+        width: 100%;
     }
 
     .content-form {

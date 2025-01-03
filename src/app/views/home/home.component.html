@@ -207,37 +207,46 @@
         </div>
         <div class="content-form">
             <div class="form">
-                <!-- <div  class="sendmessage">Sua mensagem foi enviada com sucesso!</div>
-                <div class="errormessage"> Mensagem não enviada!
-                  Preencha todo o Formulário </div> -->
-                <form method="POST" role="form" class="contactForm">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Nome" class="form-control" id="name" required
-                            data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                        <div class="validation"></div>
+                <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
+                    <div>
+                      <input id="name" type="text"  class="form-control" formControlName="name" placeholder="Nome" />
+                      <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                        <small *ngIf="contactForm.get('name')?.errors?.['required']">Nome é obrigatório.</small>
+                        <small *ngIf="contactForm.get('name')?.errors?.['minlength']">Nome deve ter pelo menos 3 caracteres.</small>
+                      </div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Seu E-mail"
-                            required data-rule="email" data-msg="Please enter a valid email" />
-                        <div class="validation"></div>
+                  
+                    <div>
+                      <input id="email" type="email"  class="form-control" formControlName="email" placeholder="Email" />
+                      <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                        <small *ngIf="contactForm.get('email')?.errors?.['required']">Email é obrigatório.</small>
+                        <small *ngIf="contactForm.get('email')?.errors?.['email']">Email inválido.</small>
+                      </div>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="subject" id="subject" required
-                            placeholder="Assunto" data-rule="minlen:4"
-                            data-msg="Please enter at least 8 chars of subject" />
-                        <div class="validation"></div>
+                  
+                    <div>
+                      <input id="subject" type="text" class="form-control" formControlName="subject" placeholder="Assunto" />
+                      <div *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched">
+                        <small *ngIf="contactForm.get('subject')?.errors?.['required']">Assunto é obrigatório.</small>
+                        <small *ngIf="contactForm.get('subject')?.errors?.['minlength']">Assunto deve ter pelo menos 3 caracteres.</small>
+                      </div>
                     </div>
-                    <div class="form-group">
-                        <textarea class="form-control" name="message" rows="5" required
-                            data-msg="Escreva sua mensagem aqui" placeholder="Escreva sua dúvida aqui"></textarea>
-                        <div class="validation"></div>
+                  
+                    <div>
+                      <textarea id="message" class="form-control" formControlName="message" rows="5" placeholder="Mensagem"></textarea>
+                      <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+                        <small *ngIf="contactForm.get('message')?.errors?.['required']">Mensagem é obrigatória.</small>
+                        <small *ngIf="contactForm.get('message')?.errors?.['minlength']">Mensagem deve ter pelo menos 10 caracteres.</small>
+                      </div>
                     </div>
-                    <div class="card-project__button">
+                  
+                    <button type="submit" [disabled]="contactForm.invalid" class="card-project__button">
                         <span>Enviar</span>
                         <i class=" fas 
                     fa-regular fa-arrow-right"></i>
-                    </div>
-                </form>
+                    </button>
+                  </form>
+                  
             </div>
             <div class="content-text">
                 <p>
@@ -256,7 +265,7 @@
         </div>
         <div class="contact__content-footer">
             <div>
-                ivanvidal.dev@gmail.com
+                ivanvidal.devgmail.com
             </div>
             <div>
                 <a href="https://github.com/Ivan-Vidal" target="_blank">

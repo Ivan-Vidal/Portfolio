@@ -16,6 +16,8 @@ import { CardProjectComponent } from './components/card-project/card-project.com
 import { ContactComponent } from './views/contact/contact.component';
 import { TechnologiesComponent } from './views/technologies/technologies.component';
 import { FormationComponent } from './views/formation/formation.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { FormationComponent } from './views/formation/formation.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSidenavModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
