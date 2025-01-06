@@ -1,73 +1,71 @@
-.tech__container {
+/* Container geral */
+.tech__content {
+    padding: 2rem 1rem;
+    background-color: #0F1624; /* Cor de fundo */
+    color: #ffffff; /* Texto claro */
+    display: flex;
+
+}
+
+/* Grid para os itens */
+.tech__content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    width: 100%;
     text-align: center;
-    
 }
 
-.tech__header{
-    margin-top: 30px;
-    margin-bottom: 20px;
+/* Cada item de tecnologia */
+.tech__item {
+    display: inline-block;
+    background-color: #192133; /* Fundo dos itens */
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.tech__content-tec {
-    background-color: #0F1624;
-    border-radius: 10px 0 10px 0;
-    box-shadow: rgba(255,255, 255, 0.9) 0px 1px 4px;
-    width: 100%;
-    margin-left: auto;
-    margin-right : auto;
-    padding: 24px 0px;
-    border-radius: 4px;
-    margin-bottom: 40px;
+.tech__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
-.tech__button {
-    width: 100%;
-    bottom: 30px;
-
-}
-
-.tech__img {
-    width: 30px;
-    border-radius: 20px;
+/* Ícones e imagens */
+.tech__item span {
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
 .size {
-    font-size: 30px;
+    font-size: 2.5rem;
+    color: #4CAF50; /* Destaque no ícone */
 }
 
-#Js {
-    color: #ffd900;
+.tech__img {
+    width: 50px;
+    height: auto;
 }
 
-#Angular {
-    color: #e70606;
+/* Texto de descrição */
+.text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #cfd8dc;
 }
 
-#Rjs {
-color: deepskyblue;
-}
+/* Responsividade */
+@media (max-width: 768px) {
+    .tech__item {
+        padding: 0.75rem;
+    }
 
-#Git {
-color: orangered;
-}
+    .size {
+        font-size: 2rem;
+    }
 
-#Njs {
-color:olivedrab;
+    .text {
+        font-size: 0.9rem;
+    }
 }
-
-#Rn {
-color: cornflowerblue;
-}
-
-#Boot {
-color: mediumpurple;
-}
-
-#Material {
-color: royalblue;
-}
-
-#Sass {
-color: #cf06ae;
-}
-      

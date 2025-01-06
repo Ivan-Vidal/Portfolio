@@ -3,6 +3,7 @@ import { MainService } from './../../services/main.service';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EmailService } from 'src/app/services/email.service';
+import { AlertService } from 'src/app/services/alert.service';
 
 @Component({
   selector: 'app-home',
@@ -15,11 +16,13 @@ export class HomeComponent implements OnInit {
   showSeeMore: boolean = true
   isMobile$: Observable<any> | undefined;
   isMobile: any;
+  isLoading: boolean = false
 
   constructor(
     private MainService: MainService,
     private fb: FormBuilder,
-    private emailService: EmailService
+    private emailService: EmailService,
+    private alertService : AlertService
   ) { 
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
@@ -43,27 +46,26 @@ export class HomeComponent implements OnInit {
     let backBlock = false
     if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
       backBlock = true
-     console.log(backBlock)
-    } else {
-      console.log('errou')
     }
   }
 
   sendEmail() {
+    this.isLoading = true
     if (this.contactForm.valid) {
       this.emailService.sendEmail(this.contactForm.value).subscribe({
         next: (response) => {
-          console.log('Email enviado com sucesso:', response);
-          alert('Email enviado com sucesso!');
+          this.isLoading = false
+          this.alertService.success( 'Enviado!','Email enviado com sucesso! Obrigado por entrar em contato.');
           this.contactForm.reset(); // Reseta o formulário
         },
         error: (error) => {
-          console.error('Erro ao enviar email:', error);
-          alert('Erro ao enviar email. Por favor, tente novamente.');
+          this.isLoading = false
+          this.alertService.error('OPS!','Erro ao enviar email. Por favor, tente novamente.');
         }
       });
     } else {
-      alert('Por favor, preencha todos os campos corretamente.');
+      this.isLoading = false
+      this.alertService.warning( 'OPS!', 'Por favor, preencha todos os campos corretamente.');
     }
   }
 

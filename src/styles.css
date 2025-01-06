@@ -19,6 +19,11 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 
 /* * {
     margin: 0;
