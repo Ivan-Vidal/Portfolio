@@ -521,6 +521,11 @@
     #contact {
         padding: 2rem;
     }
+
+    .technologys__content-main {
+        justify-content: center;
+    }
+
 }
 
 
