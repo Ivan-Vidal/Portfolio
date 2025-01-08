@@ -31,23 +31,6 @@
     </div>
 </nav>
 <div class="container" [ngClass]="{'header-fixed': windowScrolled }">
-    <!-- <header class="home__content-hero">
-        <div class="home__content-header">
-            <div class="home__content-img-hero">
-                <img src="assets/imgs/programming-img.svg" alt="programador">
-            </div>
-            <div class="home__content-title">
-                <h1>Ivan Vidal</h1>
-                <span>Sou um desenvolvedor front-end com 2 anos de experiência no setor bancário.</span>
-            </div>
-        </div>
-        <div class="home__content-see-more">
-            <a class="home__content-see-more" href="home#about" *ngIf="!windowScrolled && showSeeMore">
-                 <span>Ver Mais</span> 
-            </a>
-        </div>
-    </header> -->
-
     <header class="home__content-hero">
         <div class="home__content-header">
             <!-- Imagem principal -->
@@ -57,7 +40,8 @@
             <!-- Título e descrição -->
             <div class="home__content-title">
                 <h1>Ivan Vidal</h1>
-                <span>Desenvolvedor Front-End com 4 anos de experiência no setor bancário, apaixonado por criar soluções eficientes e inovadoras.</span>
+                <span>Desenvolvedor Front-End com 4 anos de experiência no setor bancário, apaixonado por criar soluções
+                    eficientes e inovadoras.</span>
             </div>
         </div>
         <!-- Botão de ver mais -->
@@ -68,60 +52,23 @@
             </a>
         </div>
     </header>
-    <!-- <section id="about">
-        <div class="about__content-title">
-            <h1>Sobre</h1>
-        </div>
-        <div class="about__content">
-            <div class="about__content-logo">
-                <img class="about__img" src="assets/imgs/web-developer.svg" alt="Ivan Vidal">
-            </div>
-            <div class="content-cv">
-                <a href="./assets/Charlie_Domingos_CV.pdf" download>
-                  <p>Download CV</p>
-                </a>
-                <i class="fas fa-download"></i>
-              </div>
-            <div class="about__content-description-mobile">
-                <p>Sou um desenvolvedor Angular com três anos
-                de experiência no setor bancário, focado em
-                criar soluções de software eficientes e robustas. Tenho
-                amplo conhecimento em TypeScript, HTML e CSS, e
-                estou familiarizado com as melhores práticas e
-                os padrões de desenvolvimento do Angular</p>
-            </div>
-            <div class="about__content-description-desk">
-                <span class="break__line">Sou um desenvolvedor Angular com três anos</span>
-                <span class="break__line">de experiência no setor bancário, focado em</span>
-                <span class="break__line">criar soluções de software eficientes e robustas. Tenho</span>
-                <span class="break__line">amplo conhecimento em TypeScript, HTML e CSS, e</span>
-                <span class="break__line">estou familiarizado com as melhores práticas e</span>
-                <span class="break__line">os padrões de desenvolvimento do Angular. Trabalhei</span>
-                <span class="break__line">em projetos desafiadores, como aplicações front-end</span>
-                <span class="break__line">integradas complexos de backend, abrangendo</span>
-                <span class="break__line">serviços bancários online, aplicativos móveis</span>
-                <span class="break__line"> para clientes e ferramentas internas de gestão. Minha</span>
-                <span class="break__line">experiência inclui a compreensão e conformidade,</span>
-                <span class="break__line">bem como das necessidades dos usuários</span>
-                <span class="break__line">em um setor altamente regulamentado.</span>
-
-            </div>
-        </div>
-    </section> -->
     <section id="about">
         <div class="about__content-title">
             <h1>Sobre</h1>
         </div>
         <div class="about__content">
-            <!-- Logo / Imagem -->
             <div class="about__content-logo">
                 <img class="about__img" src="assets/imgs/about-img.svg" alt="Ivan Vidal">
             </div>
-    
-            <!-- Descrição (Desktop) -->
             <div class="about__content-description">
                 <p class="about__content-description-text">
-                    Sou um desenvolvedor Angular com quatro anos de experiência no setor bancário, focado em criar soluções de software eficientes e robustas. Tenho amplo conhecimento em TypeScript, HTML e CSS, e estou familiarizado com as melhores práticas e os padrões de desenvolvimento do Angular. Trabalhei em projetos desafiadores, como aplicações front-end integradas com back-end complexos, abrangendo serviços bancários online, aplicativos móveis para clientes e ferramentas internas de gestão. Minha experiência inclui a compreensão e conformidade, bem como as necessidades dos usuários em um setor altamente regulamentado.
+                    Sou um desenvolvedor Angular com quatro anos de experiência no setor bancário, focado em criar
+                    soluções de software eficientes e robustas. Tenho amplo conhecimento em TypeScript, HTML e CSS, e
+                    estou familiarizado com as melhores práticas e os padrões de desenvolvimento do Angular. Trabalhei
+                    em projetos desafiadores, como aplicações front-end integradas a back-end com alto nível de complexidade, abrangendo
+                    serviços bancários online, aplicativos móveis para clientes e ferramentas internas de gestão. Minha
+                    experiência inclui a compreensão e conformidade, bem como as necessidades dos usuários em um setor
+                    altamente regulamentado.
                 </p>
                 <div class="content-cv">
                     <a href="/assets/cv/ivan.pdf" download>
@@ -132,31 +79,13 @@
             </div>
         </div>
     </section>
-    
-    
-    <!-- <section id="project">
-        <div class="project__content-title">
-            <h1>Projetos</h1>
-        </div>
-        <div>
-            <div>
-                <app-card-project></app-card-project>
-            </div>
-            <div>
-                <app-card-project></app-card-project>
-            </div>
-
-
-        </div>
-    </section> -->
     <section id="project">
         <div class="projects__title">
             <h1>Projetos</h1>
             <p>Aqui estão alguns dos projetos que desenvolvi.</p>
-        <p>Clique no ícone para acessar o repositório no GitHub.</p>
+            <p>Clique no ícone para acessar o repositório no GitHub.</p>
         </div>
         <div class="projects__content">
-            <!-- Card de Projeto -->
             <div class="project-card">
                 <h2>Weekly Meal Planner</h2>
                 <p>Um planejador semanal de refeições desenvolvido com Angular, Node.js e SQLite.</p>
@@ -166,31 +95,34 @@
             </div>
             <div class="project-card">
                 <h2>Angular JWT</h2>
-                <p>Uma aplicação frontend e backend construída com Angular e Node.js, utilizando autenticação JWT (JSON Web Token). O projeto foi desenvolvido com foco em boas práticas, incluindo validação de código, testes e integração contínua.</p>
+                <p>Uma aplicação frontend e backend construída com Angular e Node.js, utilizando autenticação JWT (JSON
+                    Web Token). O projeto foi desenvolvido com foco em boas práticas, incluindo validação de código,
+                    testes e integração contínua.</p>
                 <a href="https://github.com/Ivan-Vidal/jwt-angular-front" target="_blank" class="project-link">
                     <i class="fab fa-github"></i> Ver no GitHub
                 </a>
             </div>
             <div class="project-card">
                 <h2>ChartsJS</h2>
-                <p>Esse projeto tem como objetivo aprimorar meus conhecimentos em Front end com o framework Angular, monstrando as melhores formas de utilizar gráficos na web com o ChartsJS.</p>
+                <p>Esse projeto tem como objetivo aprimorar meus conhecimentos em Front end com o framework Angular,
+                    monstrando as melhores formas de utilizar gráficos na web com o ChartsJS.</p>
                 <a href="https://github.com/Ivan-Vidal/test-chartsjs" target="_blank" class="project-link">
                     <i class="fab fa-github"></i> Ver no GitHub
                 </a>
             </div>
         </div>
     </section>
-    
+
     <section id="technologys">
         <div class="technologys__content">
             <div class="technologys__content-title">
                 <h1>Tecnologias</h1>
             </div>
-    
+
             <div class="technologys__content-main">
                 <app-technologies></app-technologies>
             </div>
-    
+
             <div class="technologys__content-groups">
                 <div class="technologys__content-add">
                     <h2>Tecnologias adicionais e habilidades</h2>
@@ -203,7 +135,7 @@
                         <li>Metodologias Ágeis Scrum & Kanban</li>
                     </ul>
                 </div>
-    
+
                 <div class="technologys__content-add">
                     <h2>IDEs Utilizadas</h2>
                     <ul>
@@ -212,7 +144,7 @@
                         <li>Intellij</li>
                     </ul>
                 </div>
-    
+
                 <div class="technologys__content-add">
                     <h2>Sistemas Operacionais</h2>
                     <ul>
@@ -224,7 +156,7 @@
             </div>
         </div>
     </section>
-    
+
     <section id="contact">
         <div class="contact__content-title">
             <h1>Contato</h1>
@@ -233,100 +165,61 @@
             <div class="form">
                 <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
                     <div>
-                        <input
-                            id="name"
-                            type="text"
-                            class="form-control"
-                            formControlName="name"
-                            placeholder="Nome"
-                            required
-                            minlength="3"
-                            maxlength="100"
-                            [ngClass]="{
+                        <input id="name" type="text" class="form-control" formControlName="name" placeholder="Nome"
+                            required minlength="3" maxlength="100" [ngClass]="{
                                 'is-invalid': contactForm.get('name')?.invalid && contactForm.get('name')?.touched
-                            }"
-                        />
-                        <div
-                            *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched"
-                            class="form-error"
-                        >
+                            }" />
+                        <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched"
+                            class="form-error">
                             <small *ngIf="contactForm.get('name')?.errors?.['required']">Nome é obrigatório.</small>
                             <small *ngIf="contactForm.get('name')?.errors?.['minlength']">
                                 Nome deve ter pelo menos 3 caracteres.
                             </small>
                         </div>
                     </div>
-    
+
                     <div>
-                        <input
-                            id="email"
-                            type="email"
-                            class="form-control"
-                            formControlName="email"
-                            placeholder="Email"
-                            required
-                            [ngClass]="{
+                        <input id="email" type="email" class="form-control" formControlName="email" placeholder="Email"
+                            required [ngClass]="{
                                 'is-invalid': contactForm.get('email')?.invalid && contactForm.get('email')?.touched
-                            }"
-                        />
-                        <div
-                            *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
-                            class="form-error"
-                        >
+                            }" />
+                        <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
+                            class="form-error">
                             <small *ngIf="contactForm.get('email')?.errors?.['required']">Email é obrigatório.</small>
                             <small *ngIf="contactForm.get('email')?.errors?.['email']">Email inválido.</small>
                         </div>
                     </div>
-    
+
                     <div>
-                        <input
-                            id="subject"
-                            type="text"
-                            class="form-control"
-                            formControlName="subject"
-                            placeholder="Assunto"
-                            required
-                            minlength="3"
-                            maxlength="100"
-                            [ngClass]="{
+                        <input id="subject" type="text" class="form-control" formControlName="subject"
+                            placeholder="Assunto" required minlength="3" maxlength="100" [ngClass]="{
                                 'is-invalid': contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched
-                            }"
-                        />
-                        <div
-                            *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched"
-                            class="form-error"
-                        >
-                            <small *ngIf="contactForm.get('subject')?.errors?.['required']">Assunto é obrigatório.</small>
+                            }" />
+                        <div *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched"
+                            class="form-error">
+                            <small *ngIf="contactForm.get('subject')?.errors?.['required']">Assunto é
+                                obrigatório.</small>
                             <small *ngIf="contactForm.get('subject')?.errors?.['minlength']">
                                 Assunto deve ter pelo menos 3 caracteres.
                             </small>
                         </div>
                     </div>
-    
+
                     <div>
-                        <textarea
-                            id="message"
-                            class="form-control"
-                            formControlName="message"
-                            rows="5"
-                            placeholder="Mensagem"
-                            required
-                            minlength="10"
-                            [ngClass]="{
+                        <textarea id="message" class="form-control" formControlName="message" rows="5"
+                            placeholder="Mensagem" required minlength="10" [ngClass]="{
                                 'is-invalid': contactForm.get('message')?.invalid && contactForm.get('message')?.touched
-                            }"
-                        ></textarea>
-                        <div
-                            *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
-                            class="form-error"
-                        >
-                            <small *ngIf="contactForm.get('message')?.errors?.['required']">Mensagem é obrigatória.</small>
+                            }"></textarea>
+                        <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
+                            class="form-error">
+                            <small *ngIf="contactForm.get('message')?.errors?.['required']">Mensagem é
+                                obrigatória.</small>
                             <small *ngIf="contactForm.get('message')?.errors?.['minlength']">
                                 Mensagem deve ter pelo menos 10 caracteres.
                             </small>
                         </div>
                     </div>
-    
+
                     <button type="submit" [disabled]="contactForm.invalid" class="card-project__button">
                         <span>Enviar</span>
                         <i class="fas fa-arrow-right"></i>
@@ -336,7 +229,8 @@
             <div class="content-text">
                 <p>
                     <span class="break__line">
-                        Se você está procurando um desenvolvedor dedicado, comprometido e apaixonado por transformar ideias
+                        Se você está procurando um desenvolvedor dedicado, comprometido e apaixonado por transformar
+                        ideias
                         em realidade, estou aqui para ajudar.
                     </span>
                     <br />
@@ -372,12 +266,12 @@
             </div>
         </footer>
     </section>
-    
+
 </div>
 <a (click)="scrollToElement('inicio')" class="back-to-top" [ngClass]="{'block': windowScrolled }"><i
         class="fas fa-chevron-up"></i></a>
 
-       <!-- Overlay do Loading -->
+<!-- Overlay do Loading -->
 <div class="loading-overlay" *ngIf="isLoading">
     <div class="loading-spinner"></div>
-  </div>
+</div>
