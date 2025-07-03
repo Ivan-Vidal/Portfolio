@@ -1064,7 +1064,7 @@ backdrop-filter: blur(10px);
 
   #about .about-container .background {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end
   }
   #about .about-container .background img {
     width: 100%;
@@ -1074,7 +1074,7 @@ backdrop-filter: blur(10px);
   #about .about-container .content {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     padding: 0 20px;
 
   }
@@ -1399,7 +1399,7 @@ backdrop-filter: blur(10px);
     #call-to-action .cta-btn-container {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: flex-flex-end
     }
   }
 
