@@ -668,7 +668,7 @@
 
   </footer>
 
-  <a href="home#hero" class="back-to-top" [ngClass]="{'block': windowScrolled }"  ><i class="fas fa-chevron-up"></i></a>
+  <a (click)="scrollToElement('hero')"  class="back-to-top" [ngClass]="{'block': windowScrolled }"  ><i class="fas fa-chevron-up"></i></a>
 <div class="loading-overlay" *ngIf="isLoading">
     <div class="loading-spinner"></div>
 </div>
