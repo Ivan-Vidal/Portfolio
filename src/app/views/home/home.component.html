@@ -283,7 +283,7 @@
       </button>
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class=""><a (click)="scrollToElement('hero')">Home</a></li>
+          <li class=""><a (click)="scrollToElement('hero')">Inicio</a></li>
           <li><a (click)="scrollToElement('about')">Sobre</a></li>
 
           <li><a (click)="scrollToElement('project')">Projetos</a></li>
@@ -297,7 +297,7 @@
  <nav  id="mobile-nav">
         <ul>
           <li class="menu-active">
-            <a (click)="onClick();scrollToElement('hero')">Home</a></li>
+            <a (click)="onClick();scrollToElement('hero')">Inicio</a></li>
           <li><a  (click)="onClick();scrollToElement('about')">Sobre</a></li>
           <li><a (click)="onClick();scrollToElement('project')">Projetos</a></li>
           <li><a  (click)="onClick();scrollToElement('technologys')">Tecnologias</a></li>
@@ -318,8 +318,7 @@
 
           <h2>
             <strong>
-              <i>Desenvolvedor Front-End Angular | Especialista <br>
-                em Interfaces Web Performáticas</i>
+              <i>Ivan Vidal | Desenvolvedor <br> Front-End Angular</i>
             </strong>
           </h2>
           <a (click)="scrollToElement('about')" class="btn-get-started">Iniciar</a>
@@ -542,7 +541,7 @@
                 <small class="autor">Vidal Dev Consultoria</small>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#contact">Fale comigo</a>
+            <a class="cta-btn align-middle" (click)="scrollToElement('contact')">Fale comigo</a>
           </div>
         </div>
 
