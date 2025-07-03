@@ -17,13 +17,14 @@ export class HomeComponent implements OnInit {
   isMobile$: Observable<any> | undefined;
   isMobile: any;
   isLoading: boolean = false
+   modal = false
 
   constructor(
     private MainService: MainService,
     private fb: FormBuilder,
     private emailService: EmailService,
     private alertService : AlertService
-  ) { 
+  ) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
@@ -69,14 +70,41 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  @HostListener ("window: scroll", []) 
-onWindowScroll () { 
+    activeModal() {
+      let close = document.querySelector('.fa-bars');
+      if (close) {
+        close.classList.add('fa-times');
+      }
+    }
+
+      removeModal() {
+      const close = document.querySelector('.fa-times');
+      if (close) {
+        close.classList.remove('fa-times');
+      }
+      }
+
+  onClick(){
+
+  if (!this.modal) {
+    this.modal = true
+    this.activeModal()
+    console.log('ativei')
+  } else if (this.modal) {
+    this.modal = false
+    this.removeModal()
+    console.log('desativei')
+  }
+}
+
+  @HostListener ("window: scroll", [])
+onWindowScroll () {
     if (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop > 10 ){
-        this.windowScrolled = true; 
-    }    else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop <10) { 
-        this.windowScrolled = false; 
-    } 
-} 
+        this.windowScrolled = true;
+    }    else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop <10) {
+        this.windowScrolled = false;
+    }
+}
 
 
 }

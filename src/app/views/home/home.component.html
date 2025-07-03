@@ -1,4 +1,4 @@
-<nav id="inicio" class="navbar container navbar-dark navbar-expand-lg" style="background-color: transparent;">
+<!-- <nav id="inicio" class="navbar container navbar-dark navbar-expand-lg" style="background-color: transparent;">
     <div class="container-fluid">
         <div class="home__content-img">
             <img (click)="scrollToElement('inicio')" class="home__img" src="assets/imgs/logo-mode-dark.svg"
@@ -31,27 +31,13 @@
     </div>
 </nav>
 <div class="container" [ngClass]="{'header-fixed': windowScrolled }">
-    <header class="home__content-hero">
-        <div class="home__content-header">
-            <!-- Imagem principal -->
-            <div class="home__content-img-hero">
-                <img src="assets/imgs/programming-img.svg" alt="Ilustração de um programador">
-            </div>
-            <!-- Título e descrição -->
-            <div class="home__content-title">
-                <h1>Ivan Vidal</h1>
-                <span>Desenvolvedor Front-End com 4 anos de experiência no setor bancário, apaixonado por criar soluções
-                    eficientes e inovadoras.</span>
-            </div>
-        </div>
-        <!-- Botão de ver mais -->
-        <div class="home__content-see-more">
-            <a class="home__content-see-more-link" href="home#about" *ngIf="!windowScrolled && showSeeMore">
-                <span>Saiba Mais</span>
-                <i class="fas fa-chevron-down"></i>
-            </a>
-        </div>
-    </header>
+<section class="hero">
+  <div class="overlay">
+    <h1>Ivan Vidal</h1>
+    <p>Desenvolvedor Front-End com 4 anos de experiência no setor bancário,<br>apaixonado por criar soluções eficientes e inovadoras.</p>
+    <a href="#sobre" class="btn">Saiba mais</a>
+  </div>
+</section>
     <section id="about">
         <div class="about__content-title">
             <h1>Sobre</h1>
@@ -260,18 +246,420 @@
                 </a>
             </div>
         </div>
-        <footer id="footer">
-            <div class="copyright">
-                Copyright &copy; 2025 - <strong>Vidal Dev Consultoria</strong>
-            </div>
-        </footer>
+
     </section>
 
 </div>
 <a (click)="scrollToElement('inicio')" class="back-to-top" [ngClass]="{'block': windowScrolled }"><i
         class="fas fa-chevron-up"></i></a>
 
-<!-- Overlay do Loading -->
+
+<div class="loading-overlay" *ngIf="isLoading">
+    <div class="loading-spinner"></div>
+</div> -->
+
+
+<header id="header" class="" [ngClass]="{'header-fixed': windowScrolled }">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <a (click)="scrollToElement('hero')">
+         <img  class="home__img" src="assets/icons/logo.png" alt="Ivan Vidal">
+        </a>
+      </div>
+
+      <button (click)="onClick()" type="button" id="mobile-nav-toggle">
+        <i class="fa fa-bars">
+        </i>
+      </button>
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class=""><a (click)="scrollToElement('hero')">Home</a></li>
+          <li><a (click)="scrollToElement('about')">Sobre</a></li>
+
+          <li><a (click)="scrollToElement('project')">Projetos</a></li>
+          <li><a (click)="scrollToElement('technologys')">Tecnologias</a></li>
+
+          <li><a (click)="scrollToElement('contact')">Contato</a></li>
+        </ul>
+      </nav>
+
+<div *ngIf="modal" class="mobile-body-overly">
+ <nav  id="mobile-nav">
+        <ul>
+          <li class="menu-active">
+            <a (click)="onClick();scrollToElement('hero')">Home</a></li>
+          <li><a  (click)="onClick();scrollToElement('about')">Sobre</a></li>
+          <li><a (click)="onClick();scrollToElement('project')">Projetos</a></li>
+          <li><a  (click)="onClick();scrollToElement('technologys')">Tecnologias</a></li>
+          <li><a  (click)="onClick();scrollToElement('contact')">Contato</a></li>
+        </ul>
+      </nav>
+</div>
+
+
+
+
+    </div>
+  </header>
+
+  <section id="hero" >
+      <div class="hero-container">
+        <img class="logo-center" src="assets/icons/logo.png" alt="Ivan Vidal">
+
+          <h2>
+            <strong>
+              <i>Desenvolvedor Front-End Angular | Especialista <br>
+                em Interfaces Web Performáticas</i>
+            </strong>
+          </h2>
+          <a (click)="scrollToElement('about')" class="btn-get-started">Iniciar</a>
+    </div>
+
+  </section>
+
+  <main id="main">
+
+    <section id="about" class="container">
+
+        <div class="row about-container">
+
+          <div class="col-lg-6 content order-lg-1 order-2">
+            <h2 class="title">Sobre</h2>
+            <p>
+            Desenvolvedor Front-End com foco em Angular e TypeScript, atuando há mais de 5 anos no setor bancário. Apaixonado por construir interfaces modernas, acessíveis e de alta performance. Comprometido com boas práticas, testes automatizados, CI/CD e design centrado no usuário.
+            </p>
+
+              <div class="icon-mission">Missão:</div>
+              <p>
+                Conectar ideias à inovação por meio da tecnologia, promovendo soluções inteligentes que gerem valor real.
+              </p>
+
+            <h2 class="title">Diferenciais</h2>
+
+            <div class="icon-box wow fadeInUp">
+              <div class="icon"><i class="fa fa-photo"></i></div>
+              <h4 class="title"><a href="#">Fidelidade de Interfaces</a></h4>
+              <p class="description">Realizo construção de cada projeto pensando na melhor experiência do usuário, seguindo fielmente os protótipos.</p>
+            </div>
+
+            <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+              <div class="icon"><i class="fas fa-laptop-code"></i></div>
+              <h4 class="title"><a href="">Clean Code</a></h4>
+              <p class="description">No desenvolvimento de projetos preso pela qualidade do código, usando as melhores práticas do mercado </p>
+            </div>
+
+            <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+              <div class="icon"><i class="fa fa-bar-chart"></i></div>
+              <h4 class="title"><a href="">Metodologias Ágeis</a></h4>
+              <p class="description">utilizo metodologias de desenvolvimento onde tenho, encontros para colher feedbacks e alinhamentos para agilizar o processo de construção do projeto.</p>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight">
+            <img src="assets/icons/logo.png" alt="Ivan Vidal">
+          </div>
+        </div>
+
+
+    </section>
+
+    <section id="project" class="container">
+        <div class="project__title">
+            <h1>Projetos</h1>
+            <p>Aqui estão alguns dos projetos que desenvolvi.</p>
+            <p>Clique para acessar o repositório no GitHub ou ver o projeto rodando ao vivo.</p>
+        </div>
+        <div class="project__content">
+            <div class="project-card">
+              <div>
+                <h2>Weekly Meal Planner</h2>
+                <p>Um planejador semanal de refeições desenvolvido com Angular, Node.js e SQLite.</p>
+              </div>
+              <div>
+                <a href="https://github.com/Ivan-Vidal/meal-planner-front" target="_blank" class="project-link github">
+                    <i class="fab fa-github"></i> Ver no GitHub
+                </a>
+                 <a href="https://meal-planner-front-hazel.vercel.app/meals" target="_blank" class="project-link">
+                    <i class="fa fa-play-circle" aria-hidden="true"></i> Ver rodando
+                </a>
+              </div>
+            </div>
+            <div class="project-card">
+
+                <h2>Angular JWT</h2>
+                <p>Uma aplicação frontend e backend construída com Angular e Node.js, utilizando autenticação JWT (JSON
+                    Web Token).</p>
+
+                <a href="https://github.com/Ivan-Vidal/jwt-angular-front" target="_blank" class="project-link">
+                    <i class="fab fa-github"></i> Ver no GitHub
+                </a>
+            </div>
+            <div class="project-card">
+              <div>
+
+                <h2>ChartsJS</h2>
+                <p>Esse projeto tem como objetivo aprimorar meus conhecimentos em Front end com o framework Angular,
+                    monstrando as melhores formas de utilizar gráficos na web com o ChartsJS.</p>
+              </div>
+              <div>
+                <a href="https://github.com/Ivan-Vidal/test-chartsjs" target="_blank" class="project-link github">
+                    <i class="fab fa-github"></i> Ver no GitHub
+                </a>
+                <a href="https://test-chartsjs-cqiv0k0ud-ivan-vidal.vercel.app/" target="_blank" class="project-link">
+                    <i class="fa fa-play-circle" aria-hidden="true"></i> Ver rodando
+                </a>
+              </div>
+            </div>
+             <div class="project-card">
+              <div>
+                <h2>StopLittle</h2>
+                <p>Aplicação para melhorar a organização de tempo de foco em estudos ou tarefas em frente ao computador.</p>
+              </div>
+              <div>
+                <a href="https://github.com/Ivan-Vidal/Move.it-React-JS" target="_blank" class="project-link github">
+                    <i class="fab fa-github"></i> Ver no GitHub
+                </a>
+                <a href="https://stoplittle.vercel.app/" target="_blank" class="project-link">
+                    <i class="fa fa-play-circle" aria-hidden="true"></i> Ver rodando
+                </a>
+              </div>
+            </div>
+            <div class="project-card">
+              <div>
+
+                <h2>Money Saver</h2>
+                <p>Aplicação para o controle de sua vida financeira.</p>
+              </div>
+              <div>
+                <a href="https://github.com/Ivan-Vidal/Money-Saver" target="_blank" class="project-link github">
+                    <i class="fab fa-github"></i> Ver no GitHub
+                </a>
+                 <a href="https://money-saver-c81wwz3ed-ivan-vidal.vercel.app/" target="_blank" class="project-link">
+                    <i class="fa fa-play-circle" aria-hidden="true"></i> Ver rodando
+                </a>
+              </div>
+            </div>
+            <div class="project-card">
+
+
+                <h2>CRUD Angular CLI</h2>
+                <p>Aplicação com as funções de Create, Read, Update e Delete, o famoso CRUD.</p>
+
+                <a href="https://github.com/Ivan-Vidal/CRUD-Angular-CLI" target="_blank" class="project-link">
+                    <i class="fab fa-github"></i> Ver no GitHub
+                </a>
+            </div>
+            <div class="project-card">
+              <div>
+
+                <h2>Feedback Widget</h2>
+                <p>Aplicação que pode ser usada em qualquer site ou App mobile, para possibilitar o feedback do usuário.</p>
+            </div>
+                <a href="https://github.com/Ivan-Vidal/nlw-return" target="_blank" class="project-link github">
+                    <i class="fab fa-github"></i> Ver no GitHub
+                </a>
+                <a href="nlw-return-web-nine-mocha.vercel.app" target="_blank" class="project-link">
+                    <i class="fa fa-play-circle" aria-hidden="true"></i> Ver rodando
+                </a>
+            </div>
+            <div class="project-card">
+
+
+                <h2>PlantManager</h2>
+                <p>Aplicativo para lhe ajudar a lembrar de cuidar de suas plantas de forma fácil de acordo com cada tipo de plantinha.</p>
+
+                <a href="https://github.com/Ivan-Vidal/nlw5-plantManager" target="_blank" class="project-link">
+                    <i class="fab fa-github"></i> Ver no GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+   <section id="technologys" class="container">
+        <div class="technologys__content">
+            <div class="technologys__content-title">
+                <h1>Tecnologias</h1>
+            </div>
+
+            <div class="technologys__content-main">
+                <app-technologies></app-technologies>
+            </div>
+
+            <div class="technologys__content-groups">
+                <div class="technologys__content-add">
+                    <h2>Tecnologias adicionais e habilidades</h2>
+                    <ul>
+                        <li>Azure DevOps & Bamboo</li>
+                        <li>npm & Yarn</li>
+                        <li>Acessibilidade</li>
+                        <li>Github, GitLab & Bitbucket</li>
+                        <li>Tagueamento (Google Tag Manager)</li>
+                        <li>Metodologias Ágeis Scrum & Kanban</li>
+                    </ul>
+                </div>
+
+                <div class="technologys__content-add">
+                    <h2>IDEs Utilizadas</h2>
+                    <ul>
+                        <li>Visual Studio Code</li>
+                        <li>Eclipse</li>
+                        <li>Intellij</li>
+                    </ul>
+                </div>
+
+                <div class="technologys__content-add">
+                    <h2>Sistemas Operacionais</h2>
+                    <ul>
+                        <li>Windows</li>
+                        <li>Linux</li>
+                        <li>MacOs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="call-to-action" >
+      <div class="container wow fadeIn">
+        <div class="row container" >
+          <div class="col-lg-9  text-right text-lg-left">
+            <p class="cta-text">
+             <i class="fas fa-quote-left"></i> A transformação digital começa com uma boa ideia — e se concretiza com código, estratégia <br> e excelência.<i class="fas fa-quote-right"></i></p>
+
+                <small class="autor">Vidal Dev Consultoria</small>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#contact">Fale comigo</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+     <section id="contact" class="container">
+        <div class="contact__content-title">
+            <h1>Contato</h1>
+        </div>
+        <div class="contact__content">
+            <div class="form">
+                <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
+                    <div>
+                        <input id="name" type="text" class="form-control" formControlName="name" placeholder="Nome"
+                            required minlength="3" maxlength="100" [ngClass]="{
+                                'is-invalid': contactForm.get('name')?.invalid && contactForm.get('name')?.touched
+                            }" />
+                        <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched"
+                            class="form-error">
+                            <small *ngIf="contactForm.get('name')?.errors?.['required']">Nome é obrigatório.</small>
+                            <small *ngIf="contactForm.get('name')?.errors?.['minlength']">
+                                Nome deve ter pelo menos 3 caracteres.
+                            </small>
+                        </div>
+                    </div>
+
+                    <div>
+                        <input id="email" type="email" class="form-control" formControlName="email" placeholder="Email"
+                            required [ngClass]="{
+                                'is-invalid': contactForm.get('email')?.invalid && contactForm.get('email')?.touched
+                            }" />
+                        <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
+                            class="form-error">
+                            <small *ngIf="contactForm.get('email')?.errors?.['required']">Email é obrigatório.</small>
+                            <small *ngIf="contactForm.get('email')?.errors?.['email']">Email inválido.</small>
+                        </div>
+                    </div>
+
+                    <div>
+                        <input id="subject" type="text" class="form-control" formControlName="subject"
+                            placeholder="Assunto" required minlength="3" maxlength="100" [ngClass]="{
+                                'is-invalid': contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched
+                            }" />
+                        <div *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched"
+                            class="form-error">
+                            <small *ngIf="contactForm.get('subject')?.errors?.['required']">Assunto é
+                                obrigatório.</small>
+                            <small *ngIf="contactForm.get('subject')?.errors?.['minlength']">
+                                Assunto deve ter pelo menos 3 caracteres.
+                            </small>
+                        </div>
+                    </div>
+
+                    <div>
+                        <textarea id="message" class="form-control" formControlName="message" rows="5"
+                            placeholder="Mensagem" required minlength="10" [ngClass]="{
+                                'is-invalid': contactForm.get('message')?.invalid && contactForm.get('message')?.touched
+                            }"></textarea>
+                        <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
+                            class="form-error">
+                            <small *ngIf="contactForm.get('message')?.errors?.['required']">Mensagem é
+                                obrigatória.</small>
+                            <small *ngIf="contactForm.get('message')?.errors?.['minlength']">
+                                Mensagem deve ter pelo menos 10 caracteres.
+                            </small>
+                        </div>
+                    </div>
+
+                    <button type="submit" [disabled]="contactForm.invalid" class="card-project__button">
+                        <span>Enviar</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="content-text">
+                <p>
+                    <span class="break__line">
+                        Se você está procurando um desenvolvedor dedicado, comprometido e apaixonado por transformar
+                        ideias
+                        em realidade, estou aqui para ajudar.
+                    </span>
+                    <br />
+                    <span class="break__line">
+                        Não hesite em entrar em contato comigo através dos meus canais disponíveis abaixo.
+                    </span>
+                    <br />
+                    <span class="break__line">
+                        Obrigado por visitar o meu portfólio. Estou ansioso para trabalhar com você.
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="contact__content-footer">
+            <div class="contact__content-email">
+                <a href="mailto:ivanvidal.dev&#64;gmail.com">ivanvidal.dev&#64;gmail.com</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/Ivan-Vidal" target="_blank">
+                    <img src="assets/icons/icon-github.svg" alt="Github" />
+                </a>
+                <a href="https://www.linkedin.com/in/ivan-vidal-b7485a138/" target="_blank">
+                    <img class="home__content-icon" src="assets/icons/icon-linkedin.svg" alt="LinkedIn" />
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=5511968344811" target="_blank">
+                    <img src="assets/icons/icon-whatsapp.svg" alt="Whatsapp" />
+                </a>
+            </div>
+        </div>
+
+    </section>
+  </main>
+
+
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; 2025 - <strong>Ivan Vidal</strong>
+      </div>
+      </div>
+
+  </footer>
+
+  <a href="home#hero" class="back-to-top" [ngClass]="{'block': windowScrolled }"  ><i class="fas fa-chevron-up"></i></a>
 <div class="loading-overlay" *ngIf="isLoading">
     <div class="loading-spinner"></div>
 </div>
