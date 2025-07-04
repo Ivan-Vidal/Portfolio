@@ -535,7 +535,7 @@
 
 
 
-  <section id="call-to-action">
+  <blockquote id="call-to-action">
     <div class="container wow fadeIn">
       <div class="row container">
         <div class="col-lg-9  text-right text-lg-left">
@@ -552,7 +552,7 @@
       </div>
 
     </div>
-  </section>
+  </blockquote>
 
 
 
@@ -640,9 +640,9 @@
       </div>
     </div>
     <div class="contact__content-footer">
-      <div class="contact__content-email">
+      <address class="contact__content-email">
         <a href="mailto:ivanvidal.dev&#64;gmail.com">ivanvidal.dev&#64;gmail.com</a>
-      </div>
+      </address>
       <div class="social-links">
         <a href="https://github.com/Ivan-Vidal" target="_blank">
           <img src="assets/icons/icon-github.svg" alt="Github" />
@@ -671,6 +671,7 @@
 
 <a (click)="scrollToElement('hero')" class="back-to-top" [ngClass]="{'block': windowScrolled }"><i
     class="fas fa-chevron-up"></i></a>
-<div class="loading-overlay" *ngIf="isLoading">
+
+<dialog role="alert" aria-busy="true" class="loading-overlay" *ngIf="isLoading">
   <div class="loading-spinner"></div>
-</div>
+</dialog>
