@@ -78,6 +78,11 @@
         flex: 0 0 auto;
     }
 
+    .tech__img {
+        width: 2rem;
+        height: auto;
+    }
+
     .size {
         font-size: 2rem;
     }
