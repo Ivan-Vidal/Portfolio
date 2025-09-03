@@ -17,6 +17,7 @@ const Header = () => {
   }, []);
 
   const scrollToSection = (sectionId) => {
+     if (typeof document === 'undefined') return;
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -25,6 +26,7 @@ const Header = () => {
   };
 
   const handleDownloadResume = () => {
+     if (typeof document === 'undefined') return;
     // Mock download functionality
     const link = document.createElement('a');
     link.href = personalInfo.resumeUrl;

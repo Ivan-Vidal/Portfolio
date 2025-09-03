@@ -37,6 +37,7 @@ const Footer = () => {
                   key={index}
                   href={link.href}
                   onClick={(e) => {
+                     if (typeof document === 'undefined') return;
                     e.preventDefault();
                     const element = document.getElementById(link.href.replace('#', ''));
                     if (element) {

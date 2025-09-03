@@ -266,6 +266,7 @@ const Projects = () => {
             </p>
             <Button 
               onClick={() => {
+                 if (typeof document === 'undefined') return;
                 const element = document.getElementById('contact');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}

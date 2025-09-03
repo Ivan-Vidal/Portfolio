@@ -48,20 +48,22 @@ const Contact = () => {
     }, 2000);
   };
 
-  const handleDownloadResume = () => {
-    // Mock download functionality
-    const link = document.createElement('a');
-    link.href = personalInfo.resumeUrl;
-    link.download = 'Curriculo-Ivan-Vidal.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    
-    toast({
-      title: "Download iniciado",
-      description: "Currículo sendo baixado...",
-    });
-  };
+const handleDownloadResume = () => {
+  if (typeof document === 'undefined') return;
+
+  const link = document.createElement('a');
+  link.href = personalInfo.resumeUrl;
+  link.download = 'Curriculo-Ivan-Vidal.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  toast({
+    title: "Download iniciado",
+    description: "Currículo sendo baixado...",
+  });
+};
+
 
   const contactMethods = [
     {

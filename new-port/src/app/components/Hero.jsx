@@ -26,6 +26,7 @@ const Hero = () => {
   }, [fullText]);
 
   const scrollToAbout = () => {
+     if (typeof document === 'undefined') return;
     const element = document.getElementById('about');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -33,6 +34,7 @@ const Hero = () => {
   };
 
   const handleContactClick = () => {
+     if (typeof document === 'undefined') return;
     const element = document.getElementById('contact');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
