@@ -46,7 +46,7 @@ const Header = () => {
           <div className="flex-shrink-0">
             <button 
               onClick={() => scrollToSection('hero')}
-              className="text-xl font-mono font-bold text-white hover:text-blue-400 transition-colors"
+              className="text-xl font-mono font-bold text-white hover:text-blue-400 transition-colors cursor-pointer"
             >
               {`<IvanVidal />`}
             </button>
@@ -56,25 +56,25 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-slate-300 hover:text-white transition-colors font-mono text-sm"
+              className="text-slate-300 hover:text-white transition-colors font-mono text-sm cursor-pointer"
             >
               ./about
             </button>
             <button 
               onClick={() => scrollToSection('experience')}
-              className="text-slate-300 hover:text-white transition-colors font-mono text-sm"
+              className="text-slate-300 hover:text-white transition-colors font-mono text-sm cursor-pointer"
             >
               ./experience
             </button>
             <button 
               onClick={() => scrollToSection('projects')}
-              className="text-slate-300 hover:text-white transition-colors font-mono text-sm"
+              className="text-slate-300 hover:text-white transition-colors font-mono text-sm cursor-pointer"
             >
               ./projects
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-slate-300 hover:text-white transition-colors font-mono text-sm"
+              className="text-slate-300 hover:text-white transition-colors font-mono text-sm cursor-pointer"
             >
               ./contact
             </button>
@@ -108,7 +108,7 @@ const Header = () => {
               onClick={handleDownloadResume}
               variant="outline" 
               size="sm"
-              className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-mono"
+              className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-mono cursor-pointer"
             >
               <Download size={16} className="mr-2" />
               Resume

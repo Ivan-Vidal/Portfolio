@@ -49,7 +49,7 @@ const Projects = () => {
           <Button
             onClick={() => setFilter('all')}
             variant={filter === 'all' ? 'default' : 'outline'}
-            className={`font-mono text-sm ${
+            className={`font-mono text-sm cursor-pointer ${
               filter === 'all' 
                 ? 'bg-blue-600 hover:bg-blue-700 text-white' 
                 : 'border-slate-600 text-slate-300 hover:border-blue-500'
@@ -61,7 +61,7 @@ const Projects = () => {
           <Button
             onClick={() => setFilter('produção')}
             variant={filter === 'produção' ? 'default' : 'outline'}
-            className={`font-mono text-sm ${
+            className={`font-mono text-sm cursor-pointer ${
               filter === 'produção' 
                 ? 'bg-green-600 hover:bg-green-700 text-white' 
                 : 'border-slate-600 text-slate-300 hover:border-green-500'
@@ -72,7 +72,7 @@ const Projects = () => {
           <Button
             onClick={() => setFilter('desenvolvimento')}
             variant={filter === 'desenvolvimento' ? 'default' : 'outline'}
-            className={`font-mono text-sm ${
+            className={`font-mono text-sm cursor-pointer ${
               filter === 'desenvolvimento' 
                 ? 'bg-yellow-600 hover:bg-yellow-700 text-white' 
                 : 'border-slate-600 text-slate-300 hover:border-yellow-500'
@@ -180,7 +180,7 @@ const Projects = () => {
                     variant="ghost"
                     size="sm"
                     onClick={() => setSelectedProject(null)}
-                    className="text-slate-400 hover:text-white"
+                    className="text-slate-400 hover:text-white cursor-pointer"
                   >
                     ✕
                   </Button>
@@ -233,7 +233,7 @@ const Projects = () => {
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-slate-700">
                     <Button 
-                      className="bg-blue-600 hover:bg-blue-700 text-white font-mono"
+                      className="bg-blue-600 hover:bg-blue-700 text-white font-mono cursor-pointer"
                       onClick={() => alert('Demo não disponível - Projeto confidencial')}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
@@ -241,7 +241,7 @@ const Projects = () => {
                     </Button>
                     <Button 
                       variant="outline" 
-                      className="border-slate-600 text-slate-300 hover:border-blue-500 font-mono"
+                      className="border-slate-600 text-slate-300 hover:border-blue-500 font-mono cursor-pointer"
                       onClick={() => alert('Código fonte confidencial')}
                     >
                       <Github className="w-4 h-4 mr-2" />

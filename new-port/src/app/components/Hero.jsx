@@ -72,14 +72,14 @@ const Hero = () => {
             {isTyping && <span className="animate-pulse ml-1">|</span>}
           </div>
           
-          <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
+          {/* <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
             {personalInfo.subtitle}
-          </p>
+          </p> */}
 
           {/* Tech Stack Highlight */}
           <div className="flex flex-wrap justify-center items-center gap-4 mb-12 text-sm md:text-base">
             <span className="px-4 py-2 bg-slate-800/50 border border-blue-500/30 rounded-full text-blue-300 font-mono">
-              Angular 8-14
+              Angular CLI
             </span>
             <span className="px-4 py-2 bg-slate-800/50 border border-blue-500/30 rounded-full text-blue-300 font-mono">
               TypeScript
@@ -98,7 +98,7 @@ const Hero = () => {
           <Button 
             onClick={handleContactClick}
             size="lg"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 font-mono text-lg transition-all duration-300 hover:scale-105"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 font-mono text-lg transition-all duration-300 hover:scale-105 cursor-pointer"
           >
             Iniciar Projeto
           </Button>
@@ -106,24 +106,22 @@ const Hero = () => {
             onClick={scrollToAbout}
             variant="outline" 
             size="lg"
-            className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-3 font-mono text-lg transition-all duration-300 hover:scale-105"
+            className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-3 font-mono text-lg transition-all duration-300 hover:scale-105 cursor-pointer"
           >
             Ver Trabalhos
           </Button>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2">
           <button 
             onClick={scrollToAbout}
-            className="text-slate-400 hover:text-white transition-colors animate-bounce"
+            className="text-slate-400 hover:text-white transition-colors animate-bounce cursor-pointer"
           >
             <ChevronDown size={32} />
           </button>
         </div>
       </div>
 
-      {/* Terminal-like decoration */}
       <div className="absolute bottom-4 right-4 bg-slate-900/80 backdrop-blur-sm border border-slate-700 rounded-lg p-3 font-mono text-xs text-green-400">
         <div className="flex items-center space-x-2 mb-1">
           <div className="w-2 h-2 bg-red-500 rounded-full"></div>

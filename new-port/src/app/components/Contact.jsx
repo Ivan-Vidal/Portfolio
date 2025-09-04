@@ -8,6 +8,7 @@ import { Textarea } from './ui/textarea';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Download, Clock, CheckCircle } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 import { personalInfo, contactInfo } from '../data/mock';
+import { sendEmail } from '@/services/emailService';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -31,21 +32,30 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Mock form submission
-    setTimeout(() => {
-      toast({
-        title: "Mensagem enviada!",
-        description: "Obrigado pelo contato. Responderei em breve.",
-      });
-      
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      setIsSubmitting(false);
-    }, 2000);
+  try {
+  const res = await sendEmail(formData);
+
+  toast({
+    title: "Mensagem enviada!",
+    description: "Obrigado pelo contato. Responderei em breve.",
+  });
+
+  setFormData({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+} catch (error) {
+  toast({
+    title: "Erro ao enviar",
+    description: "Houve um problema ao enviar sua mensagem. Tente novamente.",
+    variant: "destructive", // caso seu hook use variantes
+  });
+} finally {
+  setIsSubmitting(false);
+}
+
   };
 
 const handleDownloadResume = () => {
@@ -189,7 +199,7 @@ const handleDownloadResume = () => {
               </p>
               <Button 
                 onClick={handleDownloadResume}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-mono"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-mono cursor-pointer"
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download CV
@@ -295,7 +305,7 @@ const handleDownloadResume = () => {
                 <Button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-slate-700 text-white font-mono text-lg py-3"
+                  className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-slate-700 text-white font-mono text-lg py-3 cursor-pointer"
                 >
                   {isSubmitting ? (
                     <>

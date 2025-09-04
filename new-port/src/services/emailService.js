@@ -1,0 +1,22 @@
+// src/services/emailService.js
+export async function sendEmail(data) {
+  try {
+    const response = await fetch(process.env.NEXT_PUBLIC_API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Erro ao enviar email: ${response.statusText}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Erro ao enviar email:", error);
+    throw error;
+  }
+}
+

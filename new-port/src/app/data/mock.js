@@ -2,7 +2,7 @@
 export const personalInfo = {
   name: "Ivan Vidal",
   title: "Desenvolvedor Fullstack",
-  subtitle: "5 anos de experiência no setor bancário",
+  // subtitle: "5 anos de experiência no setor bancário",
   location: "Cotia, São Paulo - Brazil",
   email: "ivanvidal.dev@gmail.com",
   phone: "+55 (11) 9 6834-4811",

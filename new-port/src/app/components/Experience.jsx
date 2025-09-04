@@ -32,7 +32,7 @@ const Experience = () => {
                   <button
                     key={exp.id}
                     onClick={() => setSelectedExperience(exp)}
-                    className={`w-full text-left p-4 rounded-lg border transition-all duration-300 ${
+                    className={`w-full text-left p-4 rounded-lg border transition-all duration-300 cursor-pointer ${
                       selectedExperience.id === exp.id
                         ? 'bg-blue-600/20 border-blue-500 text-white'
                         : 'bg-slate-800/30 border-slate-700 text-slate-300 hover:border-blue-500/50 hover:bg-slate-800/50'

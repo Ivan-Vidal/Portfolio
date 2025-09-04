@@ -130,7 +130,7 @@ const About = () => {
                 <SkillCategory 
                   title="Tools & Methods" 
                   skills={skills.tools} 
-                  color="purple"
+                  color="amber"
                 />
                 <SkillCategory 
                   title="Methodologies" 
