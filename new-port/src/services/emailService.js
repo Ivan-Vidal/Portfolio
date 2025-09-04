@@ -1,7 +1,7 @@
 // src/services/emailService.js
 export async function sendEmail(data) {
   try {
-    const response = await fetch(process.env.NEXT_PUBLIC_API_URL, {
+    const response = await fetch("https://portifolio-back-mzqh.onrender.com/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
