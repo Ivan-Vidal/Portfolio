@@ -30,10 +30,15 @@ const Header = () => {
     // Mock download functionality
     const link = document.createElement('a');
     link.href = personalInfo.resumeUrl;
-    link.download = 'Curriculo-Ivan-Vidal.pdf';
+    link.download = 'ivan-vidal.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    
+    toast({
+      title: "Download iniciado",
+      description: "Currículo sendo baixado...",
+      });
   };
 
   return (
@@ -111,7 +116,7 @@ const Header = () => {
               className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-mono cursor-pointer"
             >
               <Download size={16} className="mr-2" />
-              Resume
+              CV em PDF
             </Button>
           </div>
 
@@ -131,7 +136,7 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-950/95 backdrop-blur-md border-t border-slate-800">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-950/95 backdrop-blur-md border-t border-slate-800 rounded-xl">
               <button 
                 onClick={() => scrollToSection('about')}
                 className="block px-3 py-2 text-slate-300 hover:text-white font-mono text-sm w-full text-left"
@@ -191,7 +196,7 @@ const Header = () => {
                   className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-mono w-full"
                 >
                   <Download size={16} className="mr-2" />
-                  Download Resume
+                  Download CV
                 </Button>
               </div>
             </div>

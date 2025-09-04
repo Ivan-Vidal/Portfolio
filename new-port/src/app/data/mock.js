@@ -9,7 +9,7 @@ export const personalInfo = {
   website: "www.ivanvidal.com.br",
   github: "https://github.com/ivanvidal",
   linkedin: "https://linkedin.com/in/ivanvidal",
-  resumeUrl: "/curriculo-ivan-vidal.pdf"
+  resumeUrl: "/ivan-vidal.pdf"
 };
 
 export const about = {
@@ -183,6 +183,10 @@ export const languages = [
   {
     language: "Inglês",
     level: "Intermediário"
+  },
+  {
+    language: "Espanhol",
+    level: "Básico"
   }
 ];
 

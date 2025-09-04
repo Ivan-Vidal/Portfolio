@@ -50,7 +50,7 @@ const Contact = () => {
   toast({
     title: "Erro ao enviar",
     description: "Houve um problema ao enviar sua mensagem. Tente novamente.",
-    variant: "destructive", // caso seu hook use variantes
+    variant: "destructive",
   });
 } finally {
   setIsSubmitting(false);
@@ -63,7 +63,7 @@ const handleDownloadResume = () => {
 
   const link = document.createElement('a');
   link.href = personalInfo.resumeUrl;
-  link.download = 'Curriculo-Ivan-Vidal.pdf';
+  link.download = 'ivan-vidal.pdf';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -104,7 +104,7 @@ const handleDownloadResume = () => {
       icon: <Github className="w-5 h-5" />,
       name: 'GitHub',
       href: personalInfo.github,
-      color: 'hover:text-gray-400'
+      color: 'hover:text-blue-400'
     },
     {
       icon: <Linkedin className="w-5 h-5" />,
