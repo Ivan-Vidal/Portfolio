@@ -2,18 +2,17 @@
 export const personalInfo = {
   name: "Ivan Vidal",
   title: "Desenvolvedor Fullstack",
-  // subtitle: "5 anos de experiência no setor bancário",
   location: "Cotia, São Paulo - Brazil",
   email: "ivanvidal.dev@gmail.com",
   phone: "+55 (11) 9 6834-4811",
   website: "www.ivanvidal.com.br",
-  github: "https://github.com/ivanvidal",
-  linkedin: "https://linkedin.com/in/ivanvidal",
+  github: "https://github.com/Ivan-Vidal",
+  linkedin: "https://www.linkedin.com/in/ivan-vidal-b7485a138/",
   resumeUrl: "/ivan-vidal.pdf"
 };
 
 export const about = {
-  summary: "Desenvolvedor Fullstack com 5 anos de experiência no setor bancário, especializado em criar soluções de software eficientes, seguras e escaláveis. Expertise em Angular (versões 8 a 14), Node.js e Java, com forte atuação na integração front-end e back-end. Profundo domínio de TypeScript, JavaScript, HTML e CSS, garantindo código de fácil manutenção e interfaces responsivas, acessíveis e amigáveis ao usuário, alinhadas a ambientes altamente regulamentados.",
+  summary: "Desenvolvedor Fullstack com mais de 5 anos de experiência no setor bancário, especializado em criar soluções de software eficientes, seguras e escaláveis. Expertise em Angular CLI, Node.js e Java, com forte atuação na integração front-end e back-end. Profundo domínio de TypeScript, JavaScript, HTML e CSS, garantindo código de fácil manutenção e interfaces responsivas, acessíveis e amigáveis ao usuário, alinhadas a ambientes altamente regulamentados.",
   focus: [
     "Desenvolvimento de soluções escaláveis",
     "Integração front-end e back-end",
@@ -24,7 +23,7 @@ export const about = {
 
 export const skills = {
   frontend: [
-    "Angular (8-14)",
+    "Angular CLI",
     "TypeScript",
     "JavaScript (ES6+)",
     "HTML5 & CSS3",
@@ -116,57 +115,169 @@ export const experience = [
 export const projects = [
   {
     id: 1,
-    title: "Sistema de Autoatendimento Bancário",
-    description: "Portal web para autoatendimento bancário com recursos de acessibilidade avançados e integração com sistemas legados.",
-    technologies: ["Angular 14", "TypeScript", "Node.js", "PostgreSQL", "Redis"],
+    title: "Feedback Widget",
+    description: "Aplicação que pode ser usada em qualquer site ou App mobile, para possibilitar o feedback do usuário.",
+    technologies: ["ReactJS", "TypeScript", "Node.js", "SQLite", "Tailwind CSS", "Vite"],
     features: [
-      "Interface acessível compatível com leitores de tela",
-      "Autenticação multifator",
-      "Integração com sistemas bancários core",
-      "Dashboard em tempo real"
+      "Interface amigável para feedback do usuário",
+      "Armazenamento de feedback em banco de dados",
+      "Fácil integração com qualquer site ou app mobile",
     ],
-    status: "Produção"
+    status: "Produção",
+    url: "https://nlw-return-web-nine-mocha.vercel.app",
+    githubLink: "https://github.com/Ivan-Vidal/nlw-return"
   },
   {
     id: 2,
-    title: "Aplicativo de Pagamentos Móveis",
-    description: "Aplicação mobile-first para processamento de pagamentos com tecnologia de geolocalização e notificações push.",
-    technologies: ["Angular 12", "PWA", "WebRTC", "Google Analytics", "Jest"],
+    title: "Aplicativo PlantManager",
+    description: "Aplicativo para lhe ajudar a lembrar de cuidar de suas plantas de forma fácil de acordo com cada tipo de plantinha.",
+    technologies: ["React Native", "TypeScript", "Node.js", "SQLite", "Expo"],
     features: [
-      "Progressive Web App (PWA)",
-      "Geolocalização e mapas integrados",
-      "Notificações push personalizadas",
-      "Analytics detalhado de uso"
+      "Notificações de cuidados com as plantas",
+      "Reconhecimento de espécies de plantas",
+      "Integração com APIs de clima",
+      "Interface amigável e responsiva"
     ],
-    status: "Produção"
+    status: "Manutenção",
+    url: "",
+    githubLink: "https://github.com/Ivan-Vidal/nlw5-plantManager"
   },
   {
     id: 3,
-    title: "Dashboard de Monitoramento",
-    description: "Sistema de monitoramento em tempo real para acompanhamento de métricas bancárias e alertas automáticos.",
-    technologies: ["Angular 10", "D3.js", "WebSocket", "Node.js", "MongoDB"],
+    title: "CRUD Angular CLI",
+    description: "Aplicação com as funções de Create, Read, Update e Delete, o famoso CRUD.",
+    technologies: ["Angular 9", "Bootstrap", "WebSocket", "Node.js",],
     features: [
-      "Visualizações interativas de dados",
-      "Alertas automáticos configuráveis",
-      "Exportação de relatórios",
-      "Interface responsiva multiplataforma"
+      "Interface amigável para gerenciamento de dados",
+      "Operações de CRUD completas",
+      "Comunicação em tempo real com WebSocket",
+      "Fácil de personalizar e expandir"
     ],
-    status: "Desenvolvimento"
+    status: "Manutenção",
+    url: "",
+    githubLink: "https://github.com/Ivan-Vidal/CRUD-Angular-CLI"
   },
   {
     id: 4,
-    title: "Sistema de Gestão de Faturas",
-    description: "Plataforma para gerenciamento de faturamento empresarial com recursos de parcelamento e integração fiscal.",
+    title: "Money Saver",
+    description: "Aplicação para o controle de sua vida financeira.",
     technologies: ["Angular 8", "Java Spring", "MySQL", "Apache Kafka"],
     features: [
-      "Processamento de faturas em lote",
-      "Integração com sistemas fiscais",
-      "Relatórios gerenciais avançados",
-      "APIs RESTful documentadas"
+      "Dashboard financeiro interativo",
+      "Categorias personalizáveis de despesas e receitas",
+      "Relatórios gráficos de gastos futuramente"
     ],
-    status: "Manutenção"
+    status: "Produção",
+    url: "https://money-saver-c81wwz3ed-ivan-vidal.vercel.app/",
+    appLink: "https://github.com/Ivan-Vidal/Money-Saver"
+  },
+  {
+    id: 5,
+    title: "StopLittle",
+    description: "Aplicação para melhorar a organização de tempo de foco em estudos ou tarefas em frente ao computador.",
+    technologies: ["ReactJS", "Java Spring", "MySQL", "Apache Kafka"],
+    features: [
+      "Temporizador personalizável",
+      "Estatísticas de produtividade",
+      "Notificações sonoras e visuais",
+      "Modo escuro"
+    ],
+    status: "Produção",
+    url: "hhttps://stoplittle.vercel.app/",
+    appLink: "https://github.com/Ivan-Vidal/Move.it-React-JS"
+  },
+  {
+    id: 6,
+    title: "Portfolio Website",
+    description: "Meu site pessoal para mostrar meus projetos e habilidades.",
+    technologies: ["ReactJS", "Tailwind CSS", "Vite", "Framer Motion"],
+    features: [
+      "Design responsivo e moderno",
+      "Animações suaves com Framer Motion",
+      "SEO otimizado",
+      "Fácil de atualizar e manter"
+    ],
+    status: "Produção",
+    url: "https://www.ivanvidal.com.br",
+    githubLink: "https://github.com/Ivan-Vidal/Portfolio",
+  },
+  {
+    id: 7,
+    title: "Weekly Meal Planner",
+    description: "Um planejador semanal de refeições desenvolvido com Angular, Node.js e SQLite.",
+    technologies: ["Angular", "Node.js", "SQLite", "Express", "TypeScript", "Bootstrap", "Jest", "Git", "GitHub", "CI/CD"],
+    features: [
+      "Interface amigável para planejar refeições semanais",
+      "Banco de dados SQLite para armazenamento local",
+      "Backend em Node.js com Express para gerenciamento de dados",
+      "Testes unitários com Jest para garantir a qualidade do código"
+    ],
+    status: "Produção",
+    url: "https://meal-planner-front-hazel.vercel.app/meals",
+    githubLink: "https://github.com/Ivan-Vidal/meal-planner-front"
+  },
+  {
+    id: 8,
+    title: "Angular JWT Auth",
+    description: "Uma aplicação de autenticação JWT desenvolvida com Angular e Node.js.",
+    technologies: ["Angular", "Node.js", "MongoDB", "Express", "TypeScript", "Tailwind CSS", "Jest", "Git", "GitHub", "CI/CD"],
+    features: [
+      "Login e registro de usuários",
+      "Proteção de rotas com JWT",
+      "Backend em Node.js com Express para gerenciamento de autenticação",
+      "Testes unitários com Jest para garantir a qualidade do código"
+    ],
+    status: "Manutenção",
+    url: "",
+    githubLink: "https://github.com/Ivan-Vidal/jwt-angular-front"
+  },
+  // {
+  //   id: 8,
+  //   title: "E-commerce Store",
+  //   description: "Uma loja de e-commerce completa desenvolvida com ReactJS, Node.js e MongoDB.",
+  //   technologies: ["ReactJS", "Node.js", "MongoDB", "Express", "TypeScript", "Tailwind CSS", "Jest", "Git", "GitHub", "CI/CD"],
+  //   features: [
+  //     "Catálogo de produtos com filtros e pesquisa",
+  //     "Carrinho de compras e checkout seguro",
+  //     "Backend em Node.js com Express para gerenciamento de produtos e pedidos",
+  //     "Testes unitários com Jest para garantir a qualidade do código"
+  //   ],
+  //   status: "Produção",
+  //   url: "https://e-commerce-store-ivory.vercel.app/",
+  //   githubLink: "https://github.com/Ivan-Vidal/e-commerce-store"
+  // },
+  {
+    id: 9,
+    title: "Charts JS",
+    description: "Esse projeto tem como objetivo aprimorar meus conhecimentos em Front end com o framework Angular, monstrando as melhores formas de utilizar gráficos na web com o ChartsJS.",
+    technologies: ["Angular", "TypeScript", "ChartsJS", "Tailwind CSS", "Jest", "Git", "GitHub", "CI/CD"],
+    features: [
+      "Gráficos interativos e responsivos",
+      "Vários tipos de gráficos (linha, barra, pizza, etc.)",
+      "Fácil de integrar em qualquer aplicação web",
+      "Testes unitários com Jest para garantir a qualidade do código"
+    ],
+    status: "Produção",
+    url: "https://test-chartsjs-cqiv0k0ud-ivan-vidal.vercel.app/",
+    githubLink: "https://github.com/Ivan-Vidal/test-chartsjs"
+  },
+  {
+    id: 10,
+    title: "Task Manager",
+    description: "Um gerenciador de tarefas simples e eficiente desenvolvido com ReactJS, Node.js e MongoDB.",
+    technologies: ["ReactJS", "Node.js", "MongoDB", "Express", "TypeScript", "Tailwind CSS", "Jest", "Git", "GitHub", "CI/CD"],
+    features: [
+      "Interface intuitiva para gerenciamento de tarefas",
+      "Banco de dados MongoDB para armazenamento de tarefas",
+      "Backend em Node.js com Express para operações CRUD",
+      "Testes unitários com Jest para garantir a qualidade do código"
+    ],
+    status: "Desenvolvimento",
+    url: "",
+    githubLink: "https://github.com/Ivan-Vidal/task-manager"
   }
 ];
+
 
 export const education = {
   degree: "Tecnólogo em Análise e Desenvolvimento de Sistemas",

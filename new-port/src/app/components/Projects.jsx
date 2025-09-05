@@ -12,9 +12,13 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const getProjectIcon = (title) => {
-    if (title.includes('Bancário') || title.includes('Autoatendimento')) return <Database className="w-6 h-6" />;
-    if (title.includes('Móveis') || title.includes('Aplicativo')) return <Smartphone className="w-6 h-6" />;
-    if (title.includes('Dashboard') || title.includes('Monitoramento')) return <BarChart3 className="w-6 h-6" />;
+    const lowerTitle = title.toLowerCase();
+    if (lowerTitle.includes('app') || lowerTitle.includes('aplicativo')) return <Smartphone className="w-6 h-6" />;
+    if (lowerTitle.includes('dashboard') || lowerTitle.includes('planner') || lowerTitle.includes('charts')) return <BarChart3 className="w-6 h-6" />;
+    if (lowerTitle.includes('e-commerce') || lowerTitle.includes('stop')) return <ExternalLink className="w-6 h-6" />;
+    if (lowerTitle.includes('feedback') || lowerTitle.includes('money')) return <Github className="w-6 h-6" />;
+    if (lowerTitle.includes('banco de dados') || lowerTitle.includes('database')) return <Database className="w-6 h-6" />;
+    if (lowerTitle.includes('api') || lowerTitle.includes('backend') || lowerTitle.includes('servidor')) return <Server className="w-6 h-6" />;
     return <Code className="w-6 h-6" />;
   };
 
@@ -79,6 +83,17 @@ const Projects = () => {
             }`}
           >
             Desenvolvimento
+          </Button>
+          <Button
+            onClick={() => setFilter('manutenção')}
+            variant={filter === 'manutenção' ? 'default' : 'outline'}
+            className={`font-mono text-sm cursor-pointer ${
+              filter === 'manutenção'
+                ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+                : 'border-slate-600 text-slate-300 hover:border-blue-500'
+            }`}
+          >
+            Manutenção
           </Button>
         </div>
 
@@ -234,7 +249,13 @@ const Projects = () => {
                   <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-slate-700">
                     <Button 
                       className="bg-blue-600 hover:bg-blue-700 text-white font-mono cursor-pointer"
-                      onClick={() => alert('Demo não disponível - Projeto confidencial')}
+                      onClick={() => {
+                              if (selectedProject.url !== "") {
+                                  window.open(selectedProject.url, "_blank");
+                                } else {
+                                  alert('Demo não disponível - Projeto confidencial');
+                                }
+                              }}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Ver Demo
@@ -242,7 +263,13 @@ const Projects = () => {
                     <Button 
                       variant="outline" 
                       className="border-slate-600 text-slate-300 hover:border-blue-500 font-mono cursor-pointer"
-                      onClick={() => alert('Código fonte confidencial')}
+                      onClick={() => {
+                                if (selectedProject.githubLink !== "") {
+                                  window.open(selectedProject.githubLink, "_blank");
+                                } else {
+                                  alert("Código fonte confidencial");
+                                }
+                              }}
                     >
                       <Github className="w-4 h-4 mr-2" />
                       Código Fonte

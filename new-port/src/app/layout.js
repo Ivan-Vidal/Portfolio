@@ -17,6 +17,9 @@ const inter = Inter({
 export const metadata = {
   title: "Ivan Vidal de Almeida",
   description: "Desenvolvedor Full-Stack | React | Next.js | Tailwind CSS",
+  icons: {
+    icon: '/favicon-iv.png',
+  },
 };
 
 export default function RootLayout({ children }) {
