@@ -16,9 +16,9 @@ const inter = Inter({
 
 export const metadata = {
   title: "Ivan Vidal de Almeida",
-  description: "Desenvolvedor Full-Stack | React | Next.js | Tailwind CSS",
+  description: "Desenvolvedor Full-Stack | Angular | React | Node.js | Next.js | Tailwind CSS",
   icons: {
-    icon: '/favicon-iv.png',
+    icon: '/favicon.png',
   },
 };
 
