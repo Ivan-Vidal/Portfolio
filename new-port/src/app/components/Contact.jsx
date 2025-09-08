@@ -31,7 +31,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-
+const res = await sendEmail(formData);
   try {
   const res = await sendEmail(formData);
   console.log('Email enviado com sucesso:', res);
@@ -48,8 +48,8 @@ const Contact = () => {
     message: ''
   });
 } catch (error) {
-  console.log('Email enviado com sucesso:', res);
-  
+  console.log('Email nao enviado:', error);
+
   toast({
     title: "Erro ao enviar",
     description: "Houve um problema ao enviar sua mensagem. Tente novamente.",
