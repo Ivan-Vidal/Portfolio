@@ -18,7 +18,7 @@ export const metadata = {
   title: "Ivan Vidal de Almeida",
   description: "Desenvolvedor Full-Stack | Angular | React | Node.js | Next.js | Tailwind CSS",
   icons: {
-    icon: '/favicon.png',
+    icon: '/favicon-icon.png',
   },
 };
 
