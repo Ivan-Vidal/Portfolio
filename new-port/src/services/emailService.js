@@ -1,5 +1,5 @@
 // src/services/emailService.js
-const API_URL = 'https://portifolio-back-mzqh.onrender.com/send';  //process.env.NEXT_PUBLIC_API_URL;
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export async function sendEmail(data) {
   if (!API_URL) throw new Error("A URL da API não está definida");
