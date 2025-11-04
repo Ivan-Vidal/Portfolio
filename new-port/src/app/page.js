@@ -21,7 +21,7 @@ const Portfolio = () => {
       <main>
         <Hero />
         <About />
-        // <Experience />
+     
         <Projects />
         <Contact />
       </main>
